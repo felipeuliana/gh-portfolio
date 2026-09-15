@@ -1,0 +1,48 @@
+{
+  "name": "Felipe Uliana",
+  "title": "Senior Frontend Engineer & Web Architect",
+  "kicker": "Available for High-Impact Projects & Senior Engineering Contracts",
+  "bio": "Specialized in architecting resilient, accessible, and ultra-performant web applications. Dedicated to semantic HTML, clean modern JavaScript, zero-bloat Tailwind design systems, and verified 90-100 Lighthouse benchmarks for global clients.",
+  "location": "Remote / Worldwide",
+  "experienceYears": 10,
+  "stats": [
+    {
+      "value": "98-100",
+      "label": "Lighthouse Score Target",
+      "subtext": "Performance, A11y, Best Practices, SEO"
+    },
+    {
+      "value": "WCAG 2.2 AA",
+      "label": "Accessibility Standard",
+      "subtext": "Full screen-reader & keyboard compliance"
+    },
+    {
+      "value": "10+ Years",
+      "label": "Frontend Craftsmanship",
+      "subtext": "Architecting enterprise web systems"
+    },
+    {
+      "value": "100%",
+      "label": "Client Verification",
+      "subtext": "Audited production code & live case studies"
+    }
+  ],
+  "social": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/felipeuliana",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/felipeuliana",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:felipe.uliana@example.com",
+      "display": "felipe.uliana@example.com",
+      "icon": "mail"
+    }
+  ]
+}

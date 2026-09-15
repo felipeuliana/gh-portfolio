@@ -1,0 +1,49 @@
+[
+  {
+    "category": "Core Architecture & Web Standards",
+    "icon": "code",
+    "description": "Architecting resilient, maintainable single-page applications with clean separation of concerns, semantic markup, and zero unnecessary runtime bloat.",
+    "skills": [
+      { "name": "Semantic HTML5 Markup", "level": "Expert", "highlight": "Landmarks, Microdata, Living Standard" },
+      { "name": "Modern JavaScript (ES2026)", "level": "Expert", "highlight": "Clean Code, Asynchronous patterns, ES Modules" },
+      { "name": "Tailwind CSS Architecture", "level": "Expert", "highlight": "Design Tokens, Fluid Typography, Sub-10kb Output" },
+      { "name": "Component Systems & State", "level": "Expert", "highlight": "Reactive models, Custom Events, Immutable stores" },
+      { "name": "REST & Realtime Protocols", "level": "Advanced", "highlight": "WebSockets, Server-Sent Events, Web Workers" }
+    ]
+  },
+  {
+    "category": "Accessibility & Inclusive UX (WCAG/AA)",
+    "icon": "shield",
+    "description": "Building web experiences usable by everyone. Strict adherence to WCAG 2.2 Level AA guidelines, screen reader verification, and keyboard ergonomics.",
+    "skills": [
+      { "name": "WCAG 2.2 Level AA / AAA", "level": "Expert", "highlight": "Color contrast, cognitive load, reflow" },
+      { "name": "WAI-ARIA Authoring Practices", "level": "Expert", "highlight": "Comboboxes, Modals, Live Regions, Menus" },
+      { "name": "Keyboard Navigation & Focus", "level": "Expert", "highlight": "Focus traps, restoration, logical tab sequences" },
+      { "name": "Assistive Tech Auditing", "level": "Advanced", "highlight": "NVDA, VoiceOver, Orca, Axe-core automation" },
+      { "name": "Reduced Motion & Preferences", "level": "Expert", "highlight": "prefers-reduced-motion, high contrast support" }
+    ]
+  },
+  {
+    "category": "Performance & Core Web Vitals",
+    "icon": "zap",
+    "description": "Targeting 90-100 scores across all Lighthouse dimensions. Elimination of Cumulative Layout Shift, instantaneous LCP, and sub-50ms interaction latencies.",
+    "skills": [
+      { "name": "Lighthouse 90-100 Auditing", "level": "Expert", "highlight": "Perf, A11y, Best Practices, SEO excellence" },
+      { "name": "Core Web Vitals Optimization", "level": "Expert", "highlight": "LCP < 1.0s, INP < 100ms, CLS = 0.00" },
+      { "name": "Resource & Asset Pipeline", "level": "Expert", "highlight": "Modern image formats, font subsetting, tree-shaking" },
+      { "name": "Zero-Shift Skeleton Screens", "level": "Expert", "highlight": "Exact geometry matching, progressive hydration" },
+      { "name": "DOM Virtualization & Memory", "level": "Advanced", "highlight": "Large data grids, memory leak elimination" }
+    ]
+  },
+  {
+    "category": "Engineering Rigor & Verification",
+    "icon": "check-circle",
+    "description": "Clean code philosophy applied to every line: predictable code paths, automated verification, continuous deployment, and thorough documentation.",
+    "skills": [
+      { "name": "Clean Code JavaScript", "level": "Expert", "highlight": "Single responsibility, immutability, small functions" },
+      { "name": "Modern Build Tooling", "level": "Expert", "highlight": "Vite, Rollup, PostCSS, ESLint, Git hooks" },
+      { "name": "Automated Testing & CI/CD", "level": "Advanced", "highlight": "Playwright, Vitest, GitHub Actions, Pages" },
+      { "name": "Isolated Content Fixtures", "level": "Expert", "highlight": "Decoupled data layer, mockable contracts" }
+    ]
+  }
+]
