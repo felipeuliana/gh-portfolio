@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sovos-compliance-cloud",
+    "accentColor": "#e28413",
+    "category": "web-apps",
+    "categoryLabel": "Web App",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-sovos-compliance-cloud.jpg",
+    "liveUrl": "https://sovos.com/compliance-cloud/",
+    "metrics": {
+      "kpis": [
+        { "label": "Customers", "value": "100,000+ worldwide" },
+        { "label": "Global", "value": "150+ countries" },
+        { "label": "Transactions", "value": "70+ Bi annually" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Full Stack Developer",
+    "subtitle": "A Next.js web application for Sovos Compliance company",
+    "summary": "First and only solution that unifies tax compliance and regulatory reporting software in one platform.",
+    "technologies": ["Next.js", "Auth.js", "i18n", "Azure DevOps", "a11y", "CI/CD", "NPM"],
+    "title": "Sovos Compliance Cloud",
+    "verified": true,
+    "year": "2025-2026"
+  },
+  {
+    "id": "mosaic-react",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Design System",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-react.png",
+    "liveUrl": "https://mosaic-react.sovos.com/",
+    "metrics": {
+      "kpis": [
+        { "label": "A11y Compliance", "value": "WCAG AA" },
+        { "label": "Active Users", "value": "3,200+" },
+        { "label": "Product Teams Using", "value": "20+ Teams" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A React Library for Sovos Mosaic design system",
+    "summary": "Pre-built components following Sovos brand guidelines ensure visual consistency across all applications.",
+    "technologies": ["Material UI", "React.js", "Typescript", "css-in-js", "NPM"],
+    "title": "Mosaic React",
+    "verified": true,
+    "year": "2023-2026"
+  },
+  {
+    "id": "mosaic-css",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Design System",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-css.png",
+    "liveUrl": "https://mosaic-css.sovos.com/",
+    "metrics": {
+      "kpis": [
+        { "label": "Product Teams Using", "value": "10+ Teams" },
+        { "label": "Active Users", "value": "1,000+" },
+        { "label": "A11y Compliance", "value": "WCAG AA" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A CSS framework for Sovos Mosaic design system",
+    "summary": "Mosaic UI is based off of Mdbootstrap, a CSS & JS framework based on Material Design.",
+    "technologies": ["Material Design", "Mdbootstrap", "Sass", "Babel", "NPM"],
+    "title": "Mosaic CSS",
+    "verified": true,
+    "year": "2024"
+  },
+  {
+    "id": "cvc-flights",
+    "accentColor": "#e28413",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce & Scale",
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-flights.png",
+    "liveUrl": "https://www.cvc.com.br/passagens-aereas/",
+    "metrics": {
+      "kpis": [
+        { "label": "SEO score", "value": "92" },
+        { "label": "Take Rate", "value": "6-8%" },
+        { "label": "A11y score", "value": "70+" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling airline tickets",
+    "summary": "Passagens Aereas is based off of MaterialUI, styled components and React Query for server state management.",
+    "technologies": ["React Query", "Typescript", "Next.js", "CI/CD", "NPM"],
+    "title": "Passagens Aereas",
+    "verified": true,
+    "year": "2021-2023"
+  },
+  {
+    "id": "cvc-travel-insurance",
+    "accentColor": "#e28413",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce & Scale",
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-insurances.png",
+    "liveUrl": "https://www.cvc.com.br/seguro-viagem/",
+    "metrics": {
+      "kpis": [
+        { "label": "Take Rate", "value": "15%" },
+        { "label": "SEO score", "value": "92" },
+        { "label": "A11y score", "value": "70+" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling travel insurances",
+    "summary": "Seguro Viagem is based off of MaterialUI, styled components and MobX for client state management.",
+    "technologies": ["MobX", "Next.js", "Typescript", "MaterialUI", "NPM"],
+    "title": "Seguro Viagem",
+    "verified": true,
+    "year": "2021-2023"
+  },
+  {
+    "id": "cvc-car-rentals",
+    "accentColor": "#e28413",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce & Scale",
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-car-rentals.png",
+    "liveUrl": "https://www.cvc.com.br/aluguel-de-carros/",
+    "metrics": {
+      "kpis": [
+        { "label": "A11y score", "value": "70+" },
+        { "label": "SEO score", "value": "92" },
+        { "label": "Take Rate", "value": "12%" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling renting cars",
+    "summary": "Aluguel de Carros is based off of Typescript, React Query & MobX for state management.",
+    "technologies": ["Next.js", "Typescript", "MobX", "React Query", "NPM"],
+    "title": "Aluguel de Carros",
+    "verified": true,
+    "year": "2021-2023"
+  }
+]

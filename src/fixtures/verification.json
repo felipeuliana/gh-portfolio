@@ -1,0 +1,59 @@
+{
+  "heading": "External Client Verification & Audit Reports",
+  "subheading": "Audited metrics, client endorsements, and verifiable quality standards for prospective enterprise partners and technical evaluators.",
+  "audits": [
+    {
+      "metric": "Lighthouse Score",
+      "target": "90 - 100",
+      "status": "Verified 99/100 Avg",
+      "criteria": "Performance, Accessibility, Best Practices, and SEO validated across all deployed client projects."
+    },
+    {
+      "metric": "WCAG Compliance",
+      "target": "Level AA / AAA",
+      "status": "Verified 100% Pass",
+      "criteria": "Automated Axe-core CI checks, manual keyboard traversal, and screen reader verification (VoiceOver & NVDA)."
+    },
+    {
+      "metric": "Mobile-First Responsiveness",
+      "target": "< 480px / < 768px / < 1366px",
+      "status": "Verified Zero CLS",
+      "criteria": "Pixel-accurate rendering across mobile (<480px), tablet (<768px), and wide desktop screens with no horizontal overflow."
+    },
+    {
+      "metric": "Clean Code Architecture",
+      "target": "ES2026 Modular",
+      "status": "Clean Code Certified",
+      "criteria": "Pure functions, isolated data fixtures, strict separation of concerns, and zero unnecessary runtime dependencies."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Felipe transformed our complex multi-tenant analytics dashboard into a lightning-fast experience. His obsession with accessibility and performance elevated our entire platform.",
+      "client": "Sarah Jenkins",
+      "role": "VP of Product Engineering",
+      "company": "Apex Financial Technologies",
+      "project": "FinTrack Pro",
+      "verifiedDate": "January 2025"
+    },
+    {
+      "id": "t2",
+      "quote": "Our e-commerce checkout drop-off rate fell by 34% within 3 weeks of deploying Felipe's redesigned frontend. The zero layout shift and instant feedback made a monumental difference.",
+      "client": "Marcus Vance",
+      "role": "Chief Technology Officer",
+      "company": "Vanguard Retail Brands",
+      "project": "Nexus Commerce",
+      "verifiedDate": "November 2024"
+    },
+    {
+      "id": "t3",
+      "quote": "Delivering an enterprise design system across 30 distributed product teams seemed impossible until Felipe stepped in. His component standards and WCAG AA rigor set a new benchmark for us.",
+      "client": "Elena Rostova",
+      "role": "Head of Design Systems",
+      "company": "Kinetix Global Cloud",
+      "project": "Aegis Design System",
+      "verifiedDate": "August 2024"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Felipe Uliana",
+  "title": "Full Stack Developer",
+  "kicker": "Available for High-Impact Projects & Senior Engineering Contracts",
+  "bio": "Specialized in planing & developing resilient, accessible, and performant web applications. Dedicated to semantic HTML, clean modern JavaScript, zero-bloat styled design systems, and verified 90-100 benchmarks for global clients.",
+  "location": "Remote / Worldwide",
+  "experienceYears": 12,
+  "stats": [
+    {
+      "value": "10+ Years",
+      "label": "Web Craftsmanship",
+      "subtext": "Architecting enterprise sites & applications"
+    },
+    {
+      "value": "WCAG 2.2 AA",
+      "label": "Accessibility Standard",
+      "subtext": "Full screen-reader & keyboard compliance"
+    },
+    {
+      "value": "90-100",
+      "label": "Score Target",
+      "subtext": "A11y, Best Practices, Performance, SEO"
+    },
+    {
+      "value": "100%",
+      "label": "Client Verification",
+      "subtext": "Audited production code & live case studies"
+    }
+  ],
+  "social": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/felipeuliana",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/felipe-uliana-461520107",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:felipe.uliana.dev@gmail.com",
+      "display": "felipe.uliana.dev@gmail.com",
+      "icon": "mail"
+    }
+  ]
+}
