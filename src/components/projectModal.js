@@ -49,7 +49,7 @@ export const initProjectModal = () => {
 
 /**
  * Opens the project modal with complete case details
- * @param {object} project 
+ * @param {object} project
  * @param {HTMLElement} [triggerElement]
  */
 export const openProjectModal = (project, triggerElement) => {
@@ -86,8 +86,8 @@ export const openProjectModal = (project, triggerElement) => {
           ` : ''}
         </div>
 
-        <button 
-          type="button" 
+        <button
+          type="button"
           id="modal-close-btn"
           class="p-2 rounded-lg text-rosy-granite hover:text-ghost-white hover:bg-rosy-granite/20 transition-colors focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
           aria-label="Close project modal"
@@ -172,9 +172,9 @@ export const openProjectModal = (project, triggerElement) => {
 
       <!-- Modal Footer CTA -->
       <div class="px-6 py-4 bg-shadow-grey/95 border-t border-rosy-granite/20 flex flex-wrap items-center justify-between gap-3 sticky bottom-0">
-        <button 
-          type="button" 
-          id="modal-close-action" 
+        <button
+          type="button"
+          id="modal-close-action"
           class="px-4 py-2 rounded-lg border border-rosy-granite/40 hover:bg-rosy-granite/20 text-ghost-white text-sm font-sans transition-colors focus-visible:ring-2 focus-visible:ring-rosy-granite focus-visible:outline-none"
         >
           Close
@@ -182,10 +182,10 @@ export const openProjectModal = (project, triggerElement) => {
 
         <div class="flex items-center gap-3">
           ${project.repoUrl ? `
-            <a 
-              href="${project.repoUrl}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="${project.repoUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-rosy-granite/40 hover:border-amber-earth text-ghost-white hover:text-amber-earth text-sm font-sans transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
             >
               ${getIcon('github', 'w-4 h-4')}
@@ -194,10 +194,10 @@ export const openProjectModal = (project, triggerElement) => {
           ` : ''}
 
           ${project.liveUrl ? `
-            <a 
-              href="${project.liveUrl}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="${project.liveUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-earth text-shadow-grey hover:bg-amber-earth/90 font-bold text-sm font-sans transition-all focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
             >
               <span>Live Demonstration</span>

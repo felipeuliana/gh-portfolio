@@ -64,8 +64,8 @@ export const createProjectSkeleton = () => {
 
 /**
  * Renders multiple skeleton cards into a target container
- * @param {HTMLElement} container 
- * @param {number} count 
+ * @param {HTMLElement} container
+ * @param {number} count
  */
 export const renderProjectSkeletons = (container, count = 6) => {
   const skeletonsHtml = Array.from({ length: count }, () => createProjectSkeleton()).join('');
