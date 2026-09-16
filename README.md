@@ -1,4 +1,4 @@
-# Portfolio — Senior Frontend Architect
+# Portfolio — Full Stack Developer
 
 A single-page portfolio engineered with **HTML5**, **modern JavaScript (ES2026)**, and **Tailwind CSS v4**, designed specifically to showcase enterprise web projects for **external client verification**. Published and deployed seamlessly with **GitHub Pages**.
 
