@@ -1,218 +1,146 @@
 [
   {
-    "id": "fintrack-pro",
-    "title": "FinTrack Pro",
-    "subtitle": "Enterprise Multi-Tenant Financial Analytics Platform",
+    "id": "sovos-compliance-cloud",
+    "accentColor": "#e28413",
     "category": "web-apps",
-    "categoryLabel": "Web Application",
-    "client": "Apex Financial Technologies",
-    "role": "Lead Frontend Architect",
-    "year": "2025",
-    "verified": true,
-    "summary": "High-frequency portfolio analytics dashboard featuring real-time WebSockets, zero-layout-shift data grids, and keyboard-first accessibility.",
-    "description": "Architected an institutional-grade financial monitoring single-page suite handling tens of thousands of streaming price ticks per second without UI jank. Engineered custom virtualization algorithms for data tables containing over 100,000 rows while maintaining a smooth 60fps frame rate and strict WCAG 2.2 AA accessibility.",
-    "highlights": [
-      "Reduced initial bundle size by 54% through dynamic module federation and lazy-loaded route chunks.",
-      "Achieved a 99 Lighthouse performance score with 0.6s Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS).",
-      "Full keyboard navigation matrix and screen-reader announcements for real-time market changes using WAI-ARIA live regions.",
-      "Implemented offline data caching with IndexedDB and background service workers for mission-critical reliability."
-    ],
+    "categoryLabel": "Web App",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-sovos-compliance-cloud.jpg",
+    "liveUrl": "https://sovos.com/compliance-cloud/",
     "metrics": {
-      "lighthouse": {
-        "performance": 99,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
       "kpis": [
-        { "label": "Lighthouse Score", "value": "99/100" },
-        { "label": "Largest Contentful Paint", "value": "0.6s" },
-        { "label": "Active Users", "value": "45,000+" }
+        { "label": "Customers", "value": "100,000+ worldwide" },
+        { "label": "Global", "value": "150+ countries" },
+        { "label": "Transactions", "value": "70+ Bi annually" }
       ]
     },
-    "technologies": ["JavaScript (ES2026)", "Tailwind CSS", "WebSockets", "IndexedDB", "Vite", "Canvas 2D API", "Web Workers"],
-    "liveUrl": "https://fintrack-demo.example.com",
-    "repoUrl": "https://github.com/felipeuliana/fintrack-pro",
-    "accentColor": "#e28413"
+    "repoUrl": null,
+    "role": "Full Stack Developer",
+    "subtitle": "A Next.js web application for Sovos Compliance company",
+    "summary": "First and only solution that unifies tax compliance and regulatory reporting software in one platform.",
+    "technologies": ["Next.js", "Auth.js", "i18n", "Azure DevOps", "a11y", "CI/CD", "NPM"],
+    "title": "Sovos Compliance Cloud",
+    "verified": true,
+    "year": "2025-2026"
   },
   {
-    "id": "aegis-design-system",
-    "title": "Aegis Design System",
-    "subtitle": "Enterprise Accessible Component Library & Token Engine",
-    "category": "architecture",
-    "categoryLabel": "Frontend Architecture",
-    "client": "Kinetix Global Cloud",
-    "role": "Principal UI Architect",
-    "year": "2025",
-    "verified": true,
-    "summary": "Comprehensive, framework-agnostic design system with 48+ accessible components, automated WCAG AA audit pipelines, and token-driven theming.",
-    "description": "Designed and deployed a unified corporate design system used by over 30 cross-functional product teams. Authored strict WAI-ARIA compliant headless primitives, seamless dark/light theme switching, and comprehensive automated accessibility testing with axe-core in CI/CD pipelines.",
-    "highlights": [
-      "100% WCAG 2.2 Level AA compliance verified across all 48 interactive components.",
-      "Custom CSS token architecture integrated with Tailwind CSS utility workflows.",
-      "Zero runtime dependencies for maximum resilience and cross-framework portability.",
-      "Comprehensive interactive documentation with keyboard shortcut guides and accessibility cheat-sheets."
-    ],
+    "id": "mosaic-react",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Design System",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-react.png",
+    "liveUrl": "https://mosaic-react.sovos.com/",
     "metrics": {
-      "lighthouse": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
       "kpis": [
-        { "label": "Accessibility Score", "value": "100/100" },
-        { "label": "Component Coverage", "value": "48 Primitives" },
-        { "label": "Product Teams Using", "value": "30+ Teams" }
+        { "label": "A11y Compliance", "value": "WCAG AA" },
+        { "label": "Active Users", "value": "3,200+" },
+        { "label": "Product Teams Using", "value": "20+ Teams" }
       ]
     },
-    "technologies": ["Web Components", "Tailwind CSS", "Design Tokens", "Axe-Core", "WAI-ARIA", "ES Modules"],
-    "liveUrl": "https://aegis-ui.example.com",
-    "repoUrl": "https://github.com/felipeuliana/aegis-design-system",
-    "accentColor": "#f45b69"
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A React Library for Sovos Mosaic design system",
+    "summary": "Pre-built components following Sovos brand guidelines ensure visual consistency across all applications.",
+    "technologies": ["Material UI", "React.js", "Typescript", "css-in-js", "NPM"],
+    "title": "Mosaic React",
+    "verified": true,
+    "year": "2023-2026"
   },
   {
-    "id": "nexus-commerce",
-    "title": "Nexus Headless Commerce",
-    "subtitle": "High-Converting Sub-Second Storefront & Checkout",
+    "id": "mosaic-css",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Design System",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-css.png",
+    "liveUrl": "https://mosaic-css.sovos.com/",
+    "metrics": {
+      "kpis": [
+        { "label": "Product Teams Using", "value": "10+ Teams" },
+        { "label": "Active Users", "value": "1,000+" },
+        { "label": "A11y Compliance", "value": "WCAG AA" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A CSS framework for Sovos Mosaic design system",
+    "summary": "Mosaic UI is based off of Mdbootstrap, a CSS & JS framework based on Material Design.",
+    "technologies": ["Material Design", "Mdbootstrap", "Sass", "Babel", "NPM"],
+    "title": "Mosaic CSS",
+    "verified": true,
+    "year": "2024"
+  },
+  {
+    "id": "cvc-flights",
+    "accentColor": "#e28413",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce & Scale",
-    "client": "Vanguard Retail Brands",
-    "role": "Senior Frontend Specialist",
-    "year": "2024",
-    "verified": true,
-    "summary": "Ultra-fast headless commerce platform achieving 0.4s LCP, instant faceted search, and an accessible frictionless one-step checkout.",
-    "description": "Engineered an ultra-lean retail experience converting at 28% above industry average. Built instant client-side product filtering, accessible micro-interactions, responsive image pipelines using modern WebP/AVIF formats, and a resilient checkout flow with automatic state restoration.",
-    "highlights": [
-      "Increased mobile checkout completion rate by 34% by eliminating layout shift and input latency.",
-      "Sub-second page transitions powered by optimistic UI updates and prefetching.",
-      "Zero Cumulative Layout Shift (CLS = 0.000) verified across all screen dimensions from 320px to 4K.",
-      "Accessible custom form controls with comprehensive inline error handling and screen-reader polite announcements."
-    ],
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-flights.png",
+    "liveUrl": "https://www.cvc.com.br/passagens-aereas/",
     "metrics": {
-      "lighthouse": {
-        "performance": 98,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
       "kpis": [
-        { "label": "Conversion Lift", "value": "+34%" },
-        { "label": "Cumulative Layout Shift", "value": "0.000" },
-        { "label": "Average LCP", "value": "0.42s" }
+        { "label": "SEO score", "value": "92" },
+        { "label": "Take Rate", "value": "6-8%" },
+        { "label": "A11y score", "value": "70+" }
       ]
     },
-    "technologies": ["JavaScript (ES2026)", "Tailwind CSS", "Web Storage API", "Stripe API", "Intersection Observer", "Vite"],
-    "liveUrl": "https://nexus-store.example.com",
-    "repoUrl": "https://github.com/felipeuliana/nexus-commerce",
-    "accentColor": "#e28413"
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling airline tickets",
+    "summary": "Passagens Aereas is based off of MaterialUI, styled components and React Query for server state management.",
+    "technologies": ["React Query", "Typescript", "Next.js", "CI/CD", "NPM"],
+    "title": "Passagens Aereas",
+    "verified": true,
+    "year": "2021-2023"
   },
   {
-    "id": "pulse-health-os",
-    "title": "Pulse Health OS",
-    "subtitle": "Clinical Patient Monitoring & Telemedicine Interface",
-    "category": "web-apps",
-    "categoryLabel": "Web Application",
-    "client": "MedSync Healthcare Systems",
-    "role": "Frontend Technical Lead",
-    "year": "2024",
-    "verified": true,
-    "summary": "HIPAA-compliant telemedicine dashboard built for clinicians, featuring offline-first data sync, real-time vitals graphing, and high-contrast accessibility.",
-    "description": "Developed an accessible, high-reliability clinical workspace used by medical teams during emergency consultations. Prioritized clear typographic hierarchies, high contrast ratios exceeding WCAG AAA in critical alert modes, and offline data redundancy through Service Workers.",
-    "highlights": [
-      "Implemented responsive data visualization widgets rendering real-time ECG telemetry and vital records.",
-      "Full keyboard trap and focus restoration on all dialogs, modal drawers, and prescription workflows.",
-      "Strict data sanitization and client-side encryption layers before payload transmission.",
-      "Resilient network recovery protocol ensuring no vital updates are dropped during clinical transit."
-    ],
+    "id": "cvc-travel-insurance",
+    "accentColor": "#e28413",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce & Scale",
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-insurances.png",
+    "liveUrl": "https://www.cvc.com.br/seguro-viagem/",
     "metrics": {
-      "lighthouse": {
-        "performance": 97,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 98
-      },
       "kpis": [
-        { "label": "A11y Compliance", "value": "WCAG AAA" },
-        { "label": "Offline Uptime", "value": "99.99%" },
-        { "label": "Daily Clinical Events", "value": "120,000+" }
+        { "label": "Take Rate", "value": "15%" },
+        { "label": "SEO score", "value": "92" },
+        { "label": "A11y score", "value": "70+" }
       ]
     },
-    "technologies": ["JavaScript", "Tailwind CSS", "Service Workers", "WebRTC", "SVG Graphics", "IndexedDB"],
-    "liveUrl": "https://pulse-health.example.com",
-    "repoUrl": "https://github.com/felipeuliana/pulse-health-os",
-    "accentColor": "#f45b69"
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling travel insurances",
+    "summary": "Seguro Viagem is based off of MaterialUI, styled components and MobX for client state management.",
+    "technologies": ["MobX", "Next.js", "Typescript", "MaterialUI", "NPM"],
+    "title": "Seguro Viagem",
+    "verified": true,
+    "year": "2021-2023"
   },
   {
-    "id": "omni-docs-platform",
-    "title": "OmniDocs Engine",
-    "subtitle": "Real-Time Collaborative Technical Documentation System",
-    "category": "performance",
-    "categoryLabel": "Performance & Systems",
-    "client": "DevScale Technologies",
-    "role": "Senior Performance Engineer",
-    "year": "2024",
-    "verified": true,
-    "summary": "Blazing fast documentation workspace with virtualized AST markdown rendering, full-text client-side search, and peer-to-peer live collaboration.",
-    "description": "Engineered an in-browser technical publishing platform capable of parsing and displaying 500-page API specifications in under 50ms. Employs web workers for asynchronous AST generation, DOM recycling techniques, and syntax highlighting with zero main-thread blocking.",
-    "highlights": [
-      "Parsed 250,000 words of technical documentation without dropping a single frame.",
-      "Sub-5ms response time on fuzzy client-side search across thousands of indexed documents.",
-      "Accessible keyboard shortcuts system with interactive command palette (Cmd+K / Ctrl+K).",
-      "Dynamic typography scaling respecting user system preferences and zoom factors up to 400% without breakage."
-    ],
+    "id": "cvc-car-rentals",
+    "accentColor": "#e28413",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce & Scale",
+    "client": "CVC Brasil",
+    "image": "/images/thumb-cvc-corp-car-rentals.png",
+    "liveUrl": "https://www.cvc.com.br/aluguel-de-carros/",
     "metrics": {
-      "lighthouse": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
       "kpis": [
-        { "label": "Lighthouse Score", "value": "100/100" },
-        { "label": "Search Latency", "value": "< 4ms" },
-        { "label": "Main Thread Free", "value": "99.2%" }
+        { "label": "A11y score", "value": "70+" },
+        { "label": "SEO score", "value": "92" },
+        { "label": "Take Rate", "value": "12%" }
       ]
     },
-    "technologies": ["JavaScript", "Web Workers", "WebAssembly", "Tailwind CSS", "Service Workers", "CRDT"],
-    "liveUrl": "https://omnidocs.example.com",
-    "repoUrl": "https://github.com/felipeuliana/omni-docs-platform",
-    "accentColor": "#e28413"
-  },
-  {
-    "id": "veloce-cloud-console",
-    "title": "Veloce Cloud Console",
-    "subtitle": "Infrastructure Observability & Cluster Management Portal",
-    "category": "architecture",
-    "categoryLabel": "Frontend Architecture",
-    "client": "Strata Infrastructure Inc.",
-    "role": "Frontend Architecture Consultant",
-    "year": "2023",
+    "repoUrl": null,
+    "role": "Senior Frontend Developer",
+    "subtitle": "A Next.js web application for selling renting cars",
+    "summary": "Aluguel de Carros is based off of Typescript, React Query & MobX for state management.",
+    "technologies": ["Next.js", "Typescript", "MobX", "React Query", "NPM"],
+    "title": "Aluguel de Carros",
     "verified": true,
-    "summary": "Multi-region cluster management console with interactive topology diagrams, live log streamers, and dark-mode ergonomic UI.",
-    "description": "Delivered an operations console providing DevOps engineers with real-time insight into thousands of distributed microservices. Replaced a sluggish legacy UI with a responsive single-page architecture built with vanilla ES modules, Tailwind CSS, and lightweight SVG node graphs.",
-    "highlights": [
-      "Eliminated 1.2MB of legacy library overhead, improving load time by 78% on mobile and low-bandwidth connections.",
-      "Built custom high-density data visualizations with accessible ARIA descriptions and table alternatives for assistive technologies.",
-      "Configured continuous performance auditing with Lighthouse CI in pull requests.",
-      "Modular micro-frontend architecture enabling independent team deployments."
-    ],
-    "metrics": {
-      "lighthouse": {
-        "performance": 98,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 96
-      },
-      "kpis": [
-        { "label": "Bundle Reduction", "value": "-78%" },
-        { "label": "Lighthouse Score", "value": "98/100" },
-        { "label": "Time to Interactive", "value": "0.7s" }
-      ]
-    },
-    "technologies": ["JavaScript (ES2026)", "Tailwind CSS", "SVG Graphs", "Server-Sent Events", "Vite"],
-    "liveUrl": "https://veloce-console.example.com",
-    "repoUrl": "https://github.com/felipeuliana/veloce-cloud-console",
-    "accentColor": "#f45b69"
+    "year": "2021-2023"
   }
 ]
