@@ -11,7 +11,6 @@ import { createProjectCard } from './components/projectCard.js';
 import { renderProjectSkeletons } from './components/skeleton.js';
 import { initProjectModal, openProjectModal } from './components/projectModal.js';
 import { createSkillsSection } from './components/skillsSection.js';
-import { createVerificationSection } from './components/verificationSection.js';
 import { createAboutSection } from './components/aboutSection.js';
 import { createContactSection, initContactListeners } from './components/contactSection.js';
 import { createFooter, initFooterListeners } from './components/footer.js';
@@ -24,13 +23,13 @@ let activeCategory = 'all';
  */
 async function initPortfolio() {
   const appContainer = document.getElementById('app');
+
   if (!appContainer) return;
 
   // Retrieve initial datasets
-  const [profile, skills, verificationData] = await Promise.all([
+  const [profile, skills] = await Promise.all([
     dataService.getProfile(),
-    dataService.getSkills(),
-    dataService.getVerificationData()
+    dataService.getSkills()
   ]);
 
   // Construct semantic document structure
