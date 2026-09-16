@@ -71,3 +71,22 @@ As a senior frontend developer analyze the features inplementation and commit th
 
 ## expectation
 A set of commits implementing the last changes cronologically
+
+# Remote repository
+
+## goal
+set remote repository and publish the current branch
+
+## context
+As a senior frontend developer analyze https://github.com/felipeuliana/gh-portfolio, and usign gh cli set it as the remote repository for the current project. 
+
+## scope
+- analyze remote repository via gh cli;
+- ask for my credentials if necessary;
+- set the remote repository for the current project via gh cli;
+- publish the current branch via gh cli;
+- References:
+  - https://github.com/felipeuliana/gh-portfolio
+
+## expectation
+A set of commits implementing the last changes cronologically
