@@ -58,15 +58,15 @@ A single page website with a dark theme design, semantic, accessible and perform
 # Commits
 
 ## goal
-commit last chances by feature implementation from cronological order.
+Commit last chances by feature implementation from cronological order.
 
 ## context
-as a senior frontend developer analyze the features inplementation and commit them
+As a senior frontend developer analyze the features inplementation and commit them
 
 ## scope
-- generate commit messages following the conventional commit best practices
-- use local git config user name and email to identify the commiter
-- references:
+- Generate commit messages following the conventional commit best practices
+- Use local git config user name and email to identify the commiter
+- References:
   - https://www.conventionalcommits.org/en/v1.0.0/
 
 ## expectation
