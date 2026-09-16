@@ -6,6 +6,12 @@
 import { getIcon } from '../utils/icons.js';
 import { getProjectVisualSvg } from '../utils/projectVisuals.js';
 
+const projectImages = import.meta.glob('../images/*', {
+  eager: true,
+  import: 'default',
+  query: '?url'
+});
+
 /**
  * Creates an accessible project card element string
  * @param {object} project
@@ -31,6 +37,9 @@ export const createProjectCard = (project) => {
       +${remainingTech}
     </span>
   ` : '';
+  const imageUrl = project.image
+    ? projectImages[`../${project.image.slice(1)}`]
+    : null;
 
   return `
     <article
@@ -42,8 +51,13 @@ export const createProjectCard = (project) => {
       <div>
         <!-- Preview Mockup Header -->
         <div class="relative overflow-hidden bg-shadow-grey border-b border-rosy-granite/20 h-48 w-full">
-          ${project?.image
-            ? `<img src=/src/${project?.image}></img>`
+          ${imageUrl
+            ? `<img
+                alt="${project.title}"
+                class="h-full w-full object-cover"
+                sizes="(max-width: 768px) 500px, (max-width: 1366px) 1000px, 1500px"
+                src="${imageUrl}"
+              />`
             : getProjectVisualSvg(project.id)
           }
 
