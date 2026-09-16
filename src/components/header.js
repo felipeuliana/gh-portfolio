@@ -19,7 +19,7 @@ export const createHeader = (profile) => {
               ${profile.name}
             </span>
             <span class="font-mono text-2xs text-rosy-granite tracking-wider uppercase">
-              Senior Frontend Architect
+              Full Stack Developer
             </span>
           </div>
         </a>
@@ -38,11 +38,6 @@ export const createHeader = (profile) => {
               </a>
             </li>
             <li>
-              <a href="#verification" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
-                Verification
-              </a>
-            </li>
-            <li>
               <a href="#about" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
                 About
               </a>
@@ -57,8 +52,8 @@ export const createHeader = (profile) => {
           <div class="h-5 w-px bg-rosy-granite/30" aria-hidden="true"></div>
 
           <!-- Availability & CTA -->
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-earth text-shadow-grey hover:bg-bubble-gum-pink hover:text-ghost-white transition-all text-xs font-mono font-bold tracking-wide shadow-md focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
@@ -67,12 +62,12 @@ export const createHeader = (profile) => {
         </nav>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button 
-          type="button" 
-          id="mobile-menu-btn" 
+        <button
+          type="button"
+          id="mobile-menu-btn"
           class="md:hidden p-2.5 rounded-lg text-ghost-white border border-rosy-granite/30 hover:border-amber-earth hover:text-amber-earth transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
-          aria-expanded="false" 
-          aria-controls="mobile-nav-drawer" 
+          aria-expanded="false"
+          aria-controls="mobile-nav-drawer"
           aria-label="Open navigation menu"
         >
           ${getIcon('menu', 'w-6 h-6')}
@@ -80,8 +75,8 @@ export const createHeader = (profile) => {
       </div>
 
       <!-- Mobile Navigation Drawer -->
-      <div 
-        id="mobile-nav-drawer" 
+      <div
+        id="mobile-nav-drawer"
         class="md:hidden fixed inset-0 z-50 bg-shadow-grey/95 backdrop-blur-lg flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
         aria-label="Mobile Navigation Menu"
         hidden
@@ -96,9 +91,9 @@ export const createHeader = (profile) => {
             </span>
           </div>
 
-          <button 
-            type="button" 
-            id="mobile-menu-close" 
+          <button
+            type="button"
+            id="mobile-menu-close"
             class="p-2 rounded-lg text-rosy-granite hover:text-ghost-white border border-rosy-granite/30 focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
             aria-label="Close navigation menu"
           >
@@ -119,11 +114,6 @@ export const createHeader = (profile) => {
               </a>
             </li>
             <li>
-              <a href="#verification" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
-                Client Verification
-              </a>
-            </li>
-            <li>
               <a href="#about" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
                 Engineering Philosophy
               </a>
@@ -137,8 +127,8 @@ export const createHeader = (profile) => {
         </nav>
 
         <div class="pt-6 border-t border-rosy-granite/20 flex flex-col gap-3">
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             class="mobile-nav-link flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-earth text-shadow-grey font-bold font-sans text-base shadow-lg"
           >
             <span>Discuss Contract / Project</span>

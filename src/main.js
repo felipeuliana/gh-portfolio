@@ -36,24 +36,24 @@ async function initPortfolio() {
   // Construct semantic document structure
   appContainer.innerHTML = `
     ${createHeader(profile)}
-    
+
     <main id="main-content" class="flex-1 focus:outline-none" tabindex="-1">
       ${createHero(profile)}
-      
+
       <!-- Work / Projects Section -->
       <section id="projects" class="py-20 border-b border-rosy-granite/20" aria-labelledby="projects-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <!-- Section Header -->
           <div class="max-w-3xl mb-10">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-earth/15 text-amber-earth border border-amber-earth/30 mb-3">
               <span>Client Showcase</span>
             </div>
             <h2 id="projects-heading" class="text-3xl sm:text-4xl font-bold font-sans text-ghost-white mb-3">
-              Selected Web Applications & Systems
+              Selected Web Sites & Applications
             </h2>
             <p class="text-base text-ghost-white/80 font-sans leading-relaxed">
-              Explore enterprise projects architected for sub-second performance, strict WCAG 2.2 AA accessibility, zero cumulative layout shift, and resilient modern JavaScript.
+              Explore enterprise projects architected for performance, accessibility, semantics, modern styles and resilient behaviour.
             </p>
           </div>
 
@@ -63,11 +63,11 @@ async function initPortfolio() {
           </div>
 
           <!-- Projects Grid (Loading Skeletons render here first) -->
-          <div 
-            id="projects-grid" 
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" 
-            role="region" 
-            aria-live="polite" 
+          <div
+            id="projects-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            role="region"
+            aria-live="polite"
             aria-busy="true"
             aria-label="Projects list"
           ></div>
@@ -76,7 +76,6 @@ async function initPortfolio() {
       </section>
 
       ${createSkillsSection(skills)}
-      ${createVerificationSection(verificationData)}
       ${createAboutSection(profile)}
       ${createContactSection(profile)}
     </main>
@@ -112,7 +111,7 @@ async function initPortfolio() {
 
 /**
  * Loads projects data and smoothly updates the DOM
- * @param {string} category 
+ * @param {string} category
  */
 async function loadAndRenderProjects(category) {
   const projectsGrid = document.getElementById('projects-grid');

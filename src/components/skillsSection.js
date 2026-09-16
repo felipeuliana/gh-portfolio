@@ -45,7 +45,7 @@ export const createSkillsSection = (skills) => {
   return `
     <section id="skills" class="py-20 border-b border-rosy-granite/20 bg-shadow-grey/50" aria-labelledby="skills-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <!-- Section Header -->
         <div class="max-w-3xl mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-bubble-gum-pink border border-bubble-gum-pink/30 mb-3">
@@ -55,29 +55,13 @@ export const createSkillsSection = (skills) => {
             Core Architecture & Web Standards
           </h2>
           <p class="text-base text-ghost-white/80 font-sans leading-relaxed">
-            Every application is architected around WCAG/AA accessibility, predictable modern JavaScript clean code, responsive layouts across all device viewports, and sub-second performance.
+            Every application is architected around WCAG/AA accessibility, predictable modern JavaScript clean code, responsive layouts across all device viewports, and performance.
           </p>
         </div>
 
         <!-- Skills Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           ${categoriesHtml}
-        </div>
-
-        <!-- Architecture Principles Banner -->
-        <div class="mt-12 p-6 rounded-2xl bg-shadow-grey border border-amber-earth/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-lg">
-          <div class="space-y-1">
-            <h4 class="text-base font-bold font-sans text-amber-earth">Clean Code & Zero-Bloat Mandate</h4>
-            <p class="text-xs sm:text-sm text-ghost-white/80 font-sans">
-              No heavy frameworks where semantic HTML5 & modern ES2026 modules deliver superior performance and longevity.
-            </p>
-          </div>
-          <a 
-            href="#projects" 
-            class="px-5 py-2.5 rounded-lg bg-amber-earth text-shadow-grey font-bold font-sans text-xs sm:text-sm hover:bg-bubble-gum-pink hover:text-ghost-white transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
-          >
-            Review Architected Projects
-          </a>
         </div>
 
       </div>
