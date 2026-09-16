@@ -1,15 +1,15 @@
 {
   "name": "Felipe Uliana",
-  "title": "Senior Frontend Engineer & Web Architect",
+  "title": "Full Stack Developer",
   "kicker": "Available for High-Impact Projects & Senior Engineering Contracts",
-  "bio": "Specialized in architecting resilient, accessible, and ultra-performant web applications. Dedicated to semantic HTML, clean modern JavaScript, zero-bloat Tailwind design systems, and verified 90-100 Lighthouse benchmarks for global clients.",
+  "bio": "Specialized in planing & developing resilient, accessible, and performant web applications. Dedicated to semantic HTML, clean modern JavaScript, zero-bloat styled design systems, and verified 90-100 benchmarks for global clients.",
   "location": "Remote / Worldwide",
-  "experienceYears": 10,
+  "experienceYears": 12,
   "stats": [
     {
-      "value": "98-100",
-      "label": "Lighthouse Score Target",
-      "subtext": "Performance, A11y, Best Practices, SEO"
+      "value": "10+ Years",
+      "label": "Web Craftsmanship",
+      "subtext": "Architecting enterprise sites & applications"
     },
     {
       "value": "WCAG 2.2 AA",
@@ -17,9 +17,9 @@
       "subtext": "Full screen-reader & keyboard compliance"
     },
     {
-      "value": "10+ Years",
-      "label": "Frontend Craftsmanship",
-      "subtext": "Architecting enterprise web systems"
+      "value": "90-100",
+      "label": "Score Target",
+      "subtext": "A11y, Best Practices, Performance, SEO"
     },
     {
       "value": "100%",
@@ -35,13 +35,13 @@
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/felipeuliana",
+      "url": "https://linkedin.com/in/felipe-uliana-461520107",
       "icon": "linkedin"
     },
     {
       "name": "Email",
-      "url": "mailto:felipe.uliana@example.com",
-      "display": "felipe.uliana@example.com",
+      "url": "mailto:felipe.uliana.dev@gmail.com",
+      "display": "felipe.uliana.dev@gmail.com",
       "icon": "mail"
     }
   ]
