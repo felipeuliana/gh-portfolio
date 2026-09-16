@@ -84,9 +84,9 @@ As a senior frontend developer analyze https://github.com/felipeuliana/gh-portfo
 - analyze remote repository via gh cli;
 - ask for my credentials if necessary;
 - set the remote repository for the current project via gh cli;
-- publish the current branch via gh cli;
+- publish the development branch via gh cli;
 - References:
   - https://github.com/felipeuliana/gh-portfolio
 
 ## expectation
-A set of commits implementing the last changes cronologically
+gh-portfolio setted as the remote repository for the current project, the development branch published with all the last changes
