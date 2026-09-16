@@ -11,3 +11,4 @@
 - Prioritize Accessibility (WCAG/AA);
 - Follow JavaScript clean code; 
 - Do not add placeholder content - implement clean loading skeletons instead;
+- Commit messages follow Conventional Commits.
