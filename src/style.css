@@ -36,6 +36,11 @@
   scroll-behavior: smooth;
 }
 
+.mobile-nav-drawer {
+  background-color: #1e1e24;
+  isolation: isolate;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

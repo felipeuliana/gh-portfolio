@@ -77,7 +77,7 @@ export const createHeader = (profile) => {
       <!-- Mobile Navigation Drawer -->
       <div
         id="mobile-nav-drawer"
-        class="md:hidden fixed inset-0 z-50 bg-shadow-grey/95 backdrop-blur-lg flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
+        class="mobile-nav-drawer md:hidden fixed inset-0 z-50 bg-shadow-grey backdrop-blur-lg flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
         aria-label="Mobile Navigation Menu"
         hidden
       >
