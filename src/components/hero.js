@@ -1,6 +1,6 @@
 /**
  * Hero Section Component
- * Inspired by Carlos Rodriguez's bold typographic greeting and clear value statement.
+ * Inspired by bold typographic greeting and clear value statement.
  */
 
 import { getIcon } from '../utils/icons.js';
@@ -22,7 +22,7 @@ export const createHero = (profile) => {
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           <!-- Left Column: Typography & CTAs -->
           <div class="lg:col-span-8 space-y-6">
             <!-- Kicker Pill -->
@@ -33,7 +33,7 @@ export const createHero = (profile) => {
 
             <!-- Massive Headline -->
             <h1 id="hero-title" class="text-4xl sm:text-5xl font-bold font-sans tracking-tight text-ghost-white leading-tight">
-              Engineering <span class="text-amber-earth underline decoration-bubble-gum-pink decoration-wavy decoration-2">resilient web experiences</span> with sub-second performance.
+              Engineering <span class="text-amber-earth underline decoration-bubble-gum-pink decoration-wavy decoration-2">resilient web experiences</span> with performance.
             </h1>
 
             <!-- Bio / Value Proposition -->
@@ -43,24 +43,16 @@ export const createHero = (profile) => {
 
             <!-- Action Buttons -->
             <div class="pt-2 flex flex-wrap items-center gap-4">
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-earth text-shadow-grey hover:bg-bubble-gum-pink hover:text-ghost-white font-sans font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-amber-earth/20 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
               >
                 <span>Explore Selected Work</span>
                 ${getIcon('arrowRight', 'w-4 h-4')}
               </a>
 
-              <a 
-                href="#verification" 
-                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-shadow-grey border border-rosy-granite/40 hover:border-amber-earth text-ghost-white hover:text-amber-earth font-sans font-semibold text-sm sm:text-base transition-all focus-visible:ring-2 focus-visible:ring-rosy-granite focus-visible:outline-none"
-              >
-                ${getIcon('shield', 'w-4 h-4 text-bubble-gum-pink')}
-                <span>Client Verification Reports</span>
-              </a>
-
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 class="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl text-rosy-granite hover:text-ghost-white font-mono text-xs sm:text-sm transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
               >
                 <span>Direct Contact</span>
@@ -84,7 +76,7 @@ export const createHero = (profile) => {
               <div class="font-mono text-xs space-y-2.5 text-ghost-white/90">
                 <div class="flex justify-between">
                   <span class="text-rosy-granite">ROLE:</span>
-                  <span class="text-amber-earth font-semibold">Sr. Frontend Architect</span>
+                  <span class="text-amber-earth font-semibold">Full Stack Developer</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-rosy-granite">TECH_STACK:</span>
@@ -100,11 +92,11 @@ export const createHero = (profile) => {
                 </div>
                 <div class="flex justify-between">
                   <span class="text-rosy-granite">LIGHTHOUSE:</span>
-                  <span class="text-amber-earth font-bold">100 / 100 / 100 / 100</span>
+                  <span class="text-amber-earth font-bold">90+</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-rosy-granite">CODE_STYLE:</span>
-                  <span class="text-ghost-white">Clean Code JavaScript</span>
+                  <span class="text-ghost-white">Clean Code</span>
                 </div>
               </div>
 
