@@ -30,6 +30,10 @@ A single-page portfolio engineered with **HTML5**, **modern JavaScript (ES2026)*
 - **Tablet**: `< 768px` (`sm:` / `md:`)
 - **Desktop**: `< 1366px` (`lg:` / `xl:`)
 
+### Build approach
+
+**Skateboard** (ship the smallest usable whole, then grow the same product release by release).
+
 ---
 
 ## 🛡️ Core Rules & Compliance
