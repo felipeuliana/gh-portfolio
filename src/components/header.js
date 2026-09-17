@@ -77,7 +77,7 @@ export const createHeader = (profile) => {
       <!-- Mobile Navigation Drawer -->
       <div
         id="mobile-nav-drawer"
-        class="mobile-nav-drawer md:hidden fixed inset-0 z-50 bg-shadow-grey backdrop-blur-lg flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
+        class="mobile-nav-drawer md:hidden fixed inset-0 z-50 h-screen bg-shadow-grey flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
         aria-label="Mobile Navigation Menu"
         hidden
       >
@@ -134,9 +134,6 @@ export const createHeader = (profile) => {
             <span>Discuss Contract / Project</span>
             ${getIcon('arrowRight', 'w-4 h-4')}
           </a>
-          <span class="text-xs font-mono text-center text-rosy-granite">
-            WCAG 2.2 AA & 90-100 Lighthouse Benchmark Target
-          </span>
         </div>
       </div>
     </header>
@@ -150,9 +147,12 @@ export const initHeaderListeners = () => {
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   let drawerCleanup = null;
+  let previousBodyOverflowY = '';
 
   const openDrawer = () => {
     if (!drawer) return;
+    previousBodyOverflowY = document.body.style.overflowY;
+    document.body.style.overflowY = 'unset';
     drawer.removeAttribute('hidden');
     // Force reflow
     drawer.offsetHeight;
@@ -171,6 +171,7 @@ export const initHeaderListeners = () => {
     }
     setTimeout(() => {
       drawer.setAttribute('hidden', '');
+      document.body.style.overflowY = previousBodyOverflowY;
     }, 300);
   };
 
