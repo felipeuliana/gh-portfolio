@@ -11,7 +11,7 @@
       "kpis": [
         { "label": "Customers", "value": "100,000+ worldwide" },
         { "label": "Global", "value": "150+ countries" },
-        { "label": "Transactions", "value": "70+ Bi annually" }
+        { "label": "Entries", "value": "70+ Bi annually" }
       ]
     },
     "repoUrl": null,
