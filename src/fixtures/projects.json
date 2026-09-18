@@ -11,7 +11,7 @@
       "kpis": [
         { "label": "Customers", "value": "100,000+ worldwide" },
         { "label": "Global", "value": "150+ countries" },
-        { "label": "Transactions", "value": "70+ Bi annually" }
+        { "label": "Entries", "value": "70+ Bi annually" }
       ]
     },
     "repoUrl": null,
@@ -89,9 +89,9 @@
     "repoUrl": null,
     "role": "Senior Frontend Developer",
     "subtitle": "A Next.js web application for selling airline tickets",
-    "summary": "Passagens Aereas is based off of MaterialUI, styled components and React Query for server state management.",
+    "summary": "The B2C eCommerce for Passagens Aéreas is based off of MaterialUI, styled components and React Query for server state management.",
     "technologies": ["React Query", "Typescript", "Next.js", "CI/CD", "NPM"],
-    "title": "Passagens Aereas",
+    "title": "B2C eCommerce [Passagens Aéreas]",
     "verified": true,
     "year": "2021-2023"
   },
@@ -113,9 +113,9 @@
     "repoUrl": null,
     "role": "Senior Frontend Developer",
     "subtitle": "A Next.js web application for selling travel insurances",
-    "summary": "Seguro Viagem is based off of MaterialUI, styled components and MobX for client state management.",
+    "summary": "The B2C eCommerce for Seguro Viagem is based off of MaterialUI, styled components and MobX for client state management.",
     "technologies": ["MobX", "Next.js", "Typescript", "MaterialUI", "NPM"],
-    "title": "Seguro Viagem",
+    "title": "B2C eCommerce [Seguro Viagem]",
     "verified": true,
     "year": "2021-2023"
   },
@@ -137,9 +137,9 @@
     "repoUrl": null,
     "role": "Senior Frontend Developer",
     "subtitle": "A Next.js web application for selling renting cars",
-    "summary": "Aluguel de Carros is based off of Typescript, React Query & MobX for state management.",
+    "summary": "The B2C eCommerce for Aluguel de Carros is based off of Typescript, React Query & MobX for state management.",
     "technologies": ["Next.js", "Typescript", "MobX", "React Query", "NPM"],
-    "title": "Aluguel de Carros",
+    "title": "B2C eCommerce [Aluguel de Carros]",
     "verified": true,
     "year": "2021-2023"
   }
