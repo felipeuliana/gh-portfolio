@@ -3,6 +3,7 @@
  * Single Page Architecture for External Client Verification
  */
 
+import { announce } from './utils/a11y.js';
 import { createAboutSection } from './components/aboutSection.js';
 import { createContactSection, initContactListeners } from './components/contactSection.js';
 import { createFilterTabs, initFilterTabs } from './components/filterTabs.js';
