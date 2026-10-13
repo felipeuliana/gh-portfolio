@@ -3,7 +3,6 @@
  * Single Page Architecture for External Client Verification
  */
 
-import { announce } from './utils/a11y.js';
 import { createAboutSection } from './components/aboutSection.js';
 import { createContactSection, initContactListeners } from './components/contactSection.js';
 import { createFilterTabs, initFilterTabs } from './components/filterTabs.js';
@@ -16,6 +15,7 @@ import { dataService } from './services/dataService.js';
 import { initProjectModal, openProjectModal } from './components/projectModal.js';
 import { renderProjectSkeletons } from './components/skeleton.js';
 import { buildLanguagePath, getActiveContent, initializeLanguage, persistLanguage, t } from './i18n.js';
+import { announce } from './utils/a11y.js';
 
 let activeCategory = 'all';
 
