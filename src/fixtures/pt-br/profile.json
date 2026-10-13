@@ -1,0 +1,59 @@
+{
+  "bio": "Especializado em planejar e desenvolver aplicações web resilientes, acessíveis e performáticas. Dedicado a HTML semântico, JavaScript moderno e limpo, sistemas de design sem excesso de código e benchmarks verificados entre 90 e 100 para clientes globais.",
+  "experienceYears": 12,
+  "hero": [
+    "Desenvolvendo",
+    "experiências web resilientes",
+    "e de alto desempenho."
+  ],
+  "kicker": "Disponível para projetos de alto impacto e contratos de engenharia sênior",
+  "location": "Remoto / Global",
+  "name": "Felipe Uliana",
+  "skills": {
+    "comment": "// Princípios que norteiam cada projeto:",
+    "functionName": "PADROES_DE_ENGENHARIA"
+  },
+  "social": [
+    {
+      "display": null,
+      "icon": "github",
+      "name": "GitHub",
+      "url": "https://github.com/felipeuliana"
+    },
+    {
+      "display": null,
+      "icon": "linkedin",
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/felipe-uliana-dev"
+    },
+    {
+      "display": "felipe.uliana.dev@gmail.com",
+      "icon": "mail",
+      "name": "Email",
+      "url": "mailto:felipe.uliana.dev@gmail.com"
+    }
+  ],
+  "stats": [
+    {
+      "value": "10+ anos",
+      "label": "Experiência em web",
+      "subtext": "Arquitetura de sites e aplicações corporativas"
+    },
+    {
+      "value": "WCAG 2.2 AA",
+      "label": "Padrão de acessibilidade",
+      "subtext": "Compatibilidade completa com leitores de tela e teclado"
+    },
+    {
+      "value": "90-100",
+      "label": "Meta de pontuação",
+      "subtext": "Acessibilidade, boas práticas, performance e SEO"
+    },
+    {
+      "value": "100%",
+      "label": "Verificação por clientes",
+      "subtext": "Código de produção auditado e estudos de caso publicados"
+    }
+  ],
+  "title": "Engenheiro de software"
+}

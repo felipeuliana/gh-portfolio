@@ -63,7 +63,7 @@ When the real source lands (the feature's data integration task, or the Facade w
 
 Pass 1 from the guide's bar: design before you integrate. A gate, not advice, on every screen (auth, dashboard, feed, pricing, profile, detail, list/search, onboarding, settings, checkout, empty state, 404). No markup until the whole surface is designed; not done until it clears the bar's disqualifiers. You are a senior product designer, not a form wirer.
 
-**Commit the composition first, in writing.** List the sections top to bottom and the brand, copy, and content in each, in the design system's language. Ship to the ambition of a standalone product; never the bare functional widget (a lone form, an unstyled table, a raw list with no header), the exact stub the bar disqualifies.
+**Commit the composition first, in writing.** List the sections top to bottom and the brand, copy, and content in each, in the Design System's language. Ship to the ambition of a standalone product; never the bare functional widget (a lone form, an unstyled table, a raw list with no header), the exact stub the bar disqualifies.
 
 A complete product screen carries, cohesive and branded:
 - **Brand**: logo/wordmark, consistent; none → derive one from the product name, never an empty corner.

@@ -1,0 +1,11 @@
+{
+  "required": [
+    "metadata.title", "metadata.description", "language.label", "language.english", "language.portuguese",
+    "navigation.primary", "navigation.mobile", "navigation.projects", "navigation.skills", "navigation.about", "navigation.contact", "navigation.hire", "navigation.menuOpen", "navigation.menuClose",
+    "sections.projects.kicker", "sections.projects.title", "sections.projects.description", "sections.skills.kicker", "sections.skills.title", "sections.about.kicker", "sections.contact.kicker", "sections.contact.title",
+    "projects.filterLabel", "projects.all", "projects.designSystem", "projects.webApps", "projects.E-Commerce", "projects.showing", "projects.items", "projects.viewDetails", "projects.visit", "projects.noResults", "projects.tryAnother",
+    "accessibility.projectsList", "accessibility.technologies", "accessibility.loadingProject", "accessibility.closeModal", "accessibility.copyEmail", "accessibility.external", "accessibility.scrollTop",
+    "contact.email", "contact.copy", "contact.copied", "contact.channels", "contact.form.name", "contact.formEmail", "contact.formMessage", "contact.submit", "contact.sending", "contact.success", "contact.nameError", "contact.emailError", "contact.messageError",
+    "footer.hosted", "footer.top"
+  ]
+}

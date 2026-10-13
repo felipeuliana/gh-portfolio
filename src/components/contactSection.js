@@ -5,11 +5,14 @@
 
 import { getIcon } from '../utils/icons.js';
 import { showToast } from './toast.js';
+import { t } from '../i18n.js';
 
 export const createContactSection = (profile) => {
   const email = profile.social.find(({ name }) => name === 'Email');
   const github = profile.social.find(({ name }) => name === 'GitHub');
   const linkedin = profile.social.find(({ name }) => name === 'LinkedIn');
+
+  console.info(`email:`, email)
 
   return `
     <section id="contact" class="py-20 border-b border-rosy-granite/20 relative" aria-labelledby="contact-heading">
@@ -20,15 +23,15 @@ export const createContactSection = (profile) => {
           <!-- Column 1: Info & Quick Copy -->
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-earth/15 text-amber-earth border border-amber-earth/30">
-              <span>Initiate Collaboration</span>
+              <span>${t('sections.contact.kicker')}</span>
             </div>
 
             <h2 id="contact-heading" class="text-3xl sm:text-5xl font-bold font-sans text-ghost-white tracking-tight">
-              Let's talk!
+              ${t('sections.contact.title')}
             </h2>
 
             <p class="text-base text-ghost-white/80 font-sans leading-relaxed">
-              Have an enterprise project, frontend architecture consultation, or high-impact contract in mind? Reach out directly or complete the verified inquiry form.
+              ${t('sections.contact.description')}
             </p>
           </div>
 
@@ -36,7 +39,7 @@ export const createContactSection = (profile) => {
           <div class="lg:col-span-7 items-center">
             <!-- One-Click Copy Email Card -->
             <div class="p-4 rounded-xl bg-shadow-grey border border-rosy-granite/30 space-y-2">
-              <span class="text-xs font-mono text-rosy-granite uppercase tracking-wider block">Direct Verified Email</span>
+              <span class="text-xs font-mono text-rosy-granite uppercase tracking-wider block">${t('contact.email')}</span>
               <div class="flex items-center justify-between gap-3">
                 <span id="contact-email-val" class="font-mono text-sm sm:text-base text-ghost-white font-semibold truncate">
                   ${email?.display}
@@ -45,17 +48,17 @@ export const createContactSection = (profile) => {
                   type="button"
                   id="copy-email-btn"
                   class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-earth/20 hover:bg-amber-earth text-amber-earth hover:text-shadow-grey font-mono text-xs font-bold transition-all border border-amber-earth/40 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none shrink-0"
-                  aria-label="Copy email address ${email?.display} to clipboard"
+                  aria-label="${t('accessibility.copyEmail')} ${email?.display}"
                 >
                   ${getIcon('copy', 'w-3.5 h-3.5')}
-                  <span id="copy-btn-text">Copy</span>
+                  <span id="copy-btn-text">${t('contact.copy')}</span>
                 </button>
               </div>
             </div>
 
             <!-- Social Verification Links -->
             <div class="pt-2 space-y-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-rosy-granite block">Verified Channels</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-rosy-granite block">${t('contact.channels')}</span>
               <div class="flex items-center gap-3">
                 <a
                   href="${github?.url}"
@@ -109,12 +112,12 @@ export const initContactListeners = () => {
         document.body.removeChild(textarea);
       }
 
-      if (copyBtnText) copyBtnText.textContent = 'Copied!';
+      if (copyBtnText) copyBtnText.textContent = t('contact.copied');
 
       showToast('Email address copied to clipboard!', 'success');
 
       setTimeout(() => {
-        if (copyBtnText) copyBtnText.textContent = 'Copy';
+        if (copyBtnText) copyBtnText.textContent = t('contact.copy');
       }, 2500);
     } catch {
       showToast(`Copy failed. Email: ${emailText}`, 'info');
@@ -146,7 +149,7 @@ export const initContactListeners = () => {
 
     if (!nameInput.value.trim()) {
       hasErrors = true;
-      nameError.textContent = 'Please enter your name.';
+      nameError.textContent = t('contact.nameError');
       nameError.classList.remove('hidden');
       nameInput.setAttribute('aria-invalid', 'true');
     } else {
@@ -156,7 +159,7 @@ export const initContactListeners = () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
       hasErrors = true;
-      emailError.textContent = 'Please enter a valid email address.';
+      emailError.textContent = t('contact.emailError');
       emailError.classList.remove('hidden');
       emailInput.setAttribute('aria-invalid', 'true');
     } else {
@@ -165,7 +168,7 @@ export const initContactListeners = () => {
 
     if (!messageInput.value.trim()) {
       hasErrors = true;
-      messageError.textContent = 'Please provide details for your inquiry.';
+      messageError.textContent = t('contact.messageError');
       messageError.classList.remove('hidden');
       messageInput.setAttribute('aria-invalid', 'true');
     } else {
@@ -179,18 +182,18 @@ export const initContactListeners = () => {
 
     // Simulate submission
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Transmitting...</span>`;
+    submitBtn.innerHTML = `<span>${t('contact.sending')}...</span>`;
 
     setTimeout(() => {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `<span>Transmit Inquiry</span> ${getIcon('arrowRight', 'w-4 h-4')}`;
+      submitBtn.innerHTML = `<span>${t('contact.submit')}</span> ${getIcon('arrowRight', 'w-4 h-4')}`;
 
       form.reset();
       showToast('Inquiry transmitted successfully! I will respond within 24 hours.', 'success', 5000);
 
       if (formStatus) {
         formStatus.className = 'p-4 rounded-xl bg-amber-earth/10 border border-amber-earth/40 text-amber-earth text-sm font-sans';
-        formStatus.textContent = 'Thank you! Your message has been recorded. I will review your specifications and follow up directly.';
+        formStatus.textContent = t('contact.success');
         formStatus.classList.remove('hidden');
       }
     }, 600);

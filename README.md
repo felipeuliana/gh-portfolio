@@ -1,4 +1,4 @@
-# Portfolio — Full Stack Developer
+# Portfolio — Software Engineer
 
 A single-page portfolio engineered with **HTML5**, **modern JavaScript (ES2026)**, and **Tailwind CSS v4**, designed specifically to showcase enterprise web projects for **external client verification**. Published and deployed seamlessly with **GitHub Pages**.
 
@@ -46,7 +46,7 @@ A single-page portfolio engineered with **HTML5**, **modern JavaScript (ES2026)*
    - Skip-to-content bypass link for assistive technologies
 2. **Zero Placeholder Content**:
    - Implemented exact-geometry **shimmering loading skeletons** (`src/components/skeleton.js`)
-   - Content is dynamically hydrated from isolated JSON fixtures without layout shift (`CLS = 0.000`)
+   - Content is dynamically hydrated from isolated JSON fixtures without layout shift (`CLS ≤ 0.10`)
 3. **Isolated Fixture Architecture**:
    - `src/fixtures/profile.json`
    - `src/fixtures/projects.json`

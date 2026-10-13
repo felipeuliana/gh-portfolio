@@ -1,0 +1,93 @@
+{
+  "accessibility": {
+    "projectsList": "Lista de projetos",
+    "technologies": "Tecnologias utilizadas",
+    "loadingProject": "Carregando detalhes do projeto",
+    "closeModal": "Fechar modal do projeto",
+    "copyEmail": "Copiar endereço de e-mail",
+    "external": "abre em uma nova aba",
+    "scrollTop": "Voltar ao topo da página"
+  },
+  "contact": {
+    "email": "E-mail de contato",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "channels": "Canais verificados",
+    "form": { "name": "Nome" },
+    "formEmail": "Endereço de e-mail",
+    "formMessage": "Detalhes do projeto ou mensagem",
+    "submit": "Enviar consulta",
+    "sending": "Enviando",
+    "success": "Obrigado. Sua mensagem foi registrada.",
+    "nameError": "Informe seu nome.",
+    "emailError": "Informe um endereço de e-mail válido.",
+    "messageError": "Forneça detalhes sobre sua consulta."
+  },
+  "cta": {
+    "contact": "Entre em contato",
+    "hire": "Disponível para contratação",
+    "work": "Explore o portfólio de clientes"
+  },
+  "footer": { "hosted": "Hospedado com GitHub Pages", "top": "Topo" },
+  "language": {
+    "label": "Idioma",
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+  "metadata": {
+    "title": "Felipe Uliana | Engenheiro de software",
+    "description": "Portfólio de um engenheiro de software sênior com produtos digitais acessíveis, performáticos e resilientes."
+  },
+  "navigation": {
+    "primary": "Navegação principal",
+    "mobile": "Navegação móvel",
+    "projects": "Projetos",
+    "skills": "Arquitetura",
+    "about": "Sobre",
+    "contact": "Contato",
+    "hire": "Disponível para contratação",
+    "menuOpen": "Abrir menu de navegação",
+    "menuClose": "Fechar menu de navegação"
+  },
+  "projects": {
+    "filterLabel": "Filtrar projetos por categoria",
+    "all": "Todos os projetos",
+    "designSystem": "Sistema de design",
+    "webApps": "Aplicação web",
+    "E-Commerce": "E-Commerce",
+    "showing": "Exibindo",
+    "items": "projetos",
+    "viewDetails": "Ver detalhes",
+    "visit": "Visitar implantação publicada",
+    "noResults": "Nenhum projeto encontrado nesta categoria.",
+    "tryAnother": "Selecione outro filtro de categoria."
+  },
+  "role": "Engenheiro de Software",
+  "sections": {
+    "about": {
+      "description": "<p>Assim como a precisão artesanal demonstrada por profissionais dedicados, a engenharia web exige um compromisso inabalável com os detalhes. Há mais de 10 anos, planejo e executo projetos web para empresas de tecnologia, plataformas de e-commerce de alto volume e aplicações distribuídas em nuvem.</p><p>Minha filosofia é direta: priorizar <strong class=\"text-ghost-white font-semibold\">HTML semântico</strong> para bases sólidas e resilientes, <strong class=\"text-ghost-white font-semibold\">acessibilidade WCAG 2.2 AA</strong> para garantir que o software seja inclusivo por padrão, <strong class=\"text-ghost-white font-semibold\">CSS preciso</strong> para uma experiência de usuário fluida e <strong class=\"text-ghost-white font-semibold\">JavaScript limpo</strong>, livre de camadas de abstração excessivas.</p><p>Seja desenvolvendo uma ferramenta de visualização de dados em tempo real para arquiteturas multi-tenant ou projetando uma biblioteca de componentes de alta performance, meu objetivo é sempre o mesmo: entregar soluções web verificáveis, sustentáveis ​​e de alto desempenho para clientes em todo o mundo.</p>",
+      "kicker": "Padrões de engenharia",
+      "title": "Uma década criando sistemas web com paixão, precisão e sem enrolação."
+    },
+    "contact": {
+      "description": "Tem em mente um projeto corporativo, uma consultoria de arquitetura frontend ou um contrato de alto impacto? Entre em contato diretamente.",
+      "kicker": "Iniciar colaboração",
+      "title": "Vamos conversar!"
+    },
+    "footer": {
+      "description": "Desenvolvido com HTML semântico, JavaScript limpo e Tailwind CSS.",
+      "kicker": null,
+      "title": null
+    },
+    "projects": {
+      "description": "Explore projetos corporativos arquitetados com foco em desempenho, acessibilidade, semântica, estilos modernos e comportamento resiliente.",
+      "kicker": "Portfólio de clientes",
+      "title": "Sites e aplicações selecionados"
+    },
+    "skills": {
+      "description": "Cada aplicação é arquitetada com foco na acessibilidade WCAG/AA, código limpo em JavaScript moderno e previsível, layouts responsivos para todas as resoluções de tela e desempenho.",
+      "kicker": "Capacidade técnica",
+      "title": "Arquitetura com propósito"
+    }
+  }
+}

@@ -3,18 +3,19 @@
  * Single Page Architecture for External Client Verification
  */
 
-import { dataService } from './services/dataService.js';
-import { createHeader, initHeaderListeners } from './components/header.js';
-import { createHero } from './components/hero.js';
-import { createFilterTabs, initFilterTabs } from './components/filterTabs.js';
-import { createProjectCard } from './components/projectCard.js';
-import { renderProjectSkeletons } from './components/skeleton.js';
-import { initProjectModal, openProjectModal } from './components/projectModal.js';
-import { createSkillsSection } from './components/skillsSection.js';
+import { announce } from './utils/a11y.js';
 import { createAboutSection } from './components/aboutSection.js';
 import { createContactSection, initContactListeners } from './components/contactSection.js';
+import { createFilterTabs, initFilterTabs } from './components/filterTabs.js';
 import { createFooter, initFooterListeners } from './components/footer.js';
-import { announce } from './utils/a11y.js';
+import { createHeader, initHeaderListeners } from './components/header.js';
+import { createHero } from './components/hero.js';
+import { createProjectCard } from './components/projectCard.js';
+import { createSkillsSection } from './components/skillsSection.js';
+import { dataService } from './services/dataService.js';
+import { initProjectModal, openProjectModal } from './components/projectModal.js';
+import { renderProjectSkeletons } from './components/skeleton.js';
+import { buildLanguagePath, getActiveContent, initializeLanguage, persistLanguage, t } from './i18n.js';
 
 let activeCategory = 'all';
 
@@ -26,6 +27,9 @@ async function initPortfolio() {
 
   if (!appContainer) return;
 
+  const language = initializeLanguage();
+  dataService.load(language);
+  const content = getActiveContent();
   // Retrieve initial datasets
   const [profile, skills] = await Promise.all([
     dataService.getProfile(),
@@ -46,13 +50,13 @@ async function initPortfolio() {
           <!-- Section Header -->
           <div class="max-w-3xl mb-10">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-earth/15 text-amber-earth border border-amber-earth/30 mb-3">
-              <span>Client Showcase</span>
+              <span>${t('sections.projects.kicker')}</span>
             </div>
             <h2 id="projects-heading" class="text-3xl sm:text-4xl font-bold font-sans text-ghost-white mb-3">
-              Selected Web Sites & Applications
+              ${t('sections.projects.title')}
             </h2>
             <p class="text-base text-ghost-white/80 font-sans leading-relaxed">
-              Explore enterprise projects architected for performance, accessibility, semantics, modern styles and resilient behaviour.
+              ${t('sections.projects.description')}
             </p>
           </div>
 
@@ -68,7 +72,7 @@ async function initPortfolio() {
             role="region"
             aria-live="polite"
             aria-busy="true"
-            aria-label="Projects list"
+            aria-label="${t('accessibility.projectsList')}"
           ></div>
 
         </div>
@@ -106,6 +110,14 @@ async function initPortfolio() {
 
   // Setup intersection observer for active navigation links
   setupScrollSpy();
+
+  document.querySelectorAll('[data-language-select]').forEach((select) => {
+    select.addEventListener('change', (event) => {
+      const selected = event.target.value;
+      persistLanguage(selected);
+      window.location.assign(buildLanguagePath(selected));
+    });
+  });
 }
 
 /**
@@ -126,8 +138,8 @@ async function loadAndRenderProjects(category) {
     if (projects.length === 0) {
       projectsGrid.innerHTML = `
         <div class="col-span-full py-16 text-center text-rosy-granite font-mono">
-          <p class="text-base text-ghost-white mb-1">No projects found in this category.</p>
-          <p class="text-xs">Please select another category filter above.</p>
+          <p class="text-base text-ghost-white mb-1">${t('projects.noResults')}</p>
+          <p class="text-xs">${t('projects.tryAnother')}</p>
         </div>
       `;
     } else {
@@ -145,7 +157,7 @@ async function loadAndRenderProjects(category) {
     console.error('Failed to load projects:', error);
     projectsGrid.innerHTML = `
       <div class="col-span-full p-8 rounded-xl bg-bubble-gum-pink/10 border border-bubble-gum-pink/40 text-center font-mono text-sm text-ghost-white">
-        Failed to load project fixtures. Please refresh or check the network.
+      ${t('projects.noResults')}
       </div>
     `;
     projectsGrid.setAttribute('aria-busy', 'false');

@@ -2,11 +2,11 @@
 
 ## Path B: No source, establish the system, then build (design first)
 
-This is case 4 from the guide: nothing was provided, so you establish the design system, then build to the bar. Design first, integrate second.
+This is case 4 from the guide: nothing was provided, so you establish the Design System, then build to the bar. Design first, integrate second.
 
 **Prefer a proven design skill when one is available** (Anthropic's `frontend-design` on Claude Code, Codex's frontend skill, or a design MCP): it sets the visual direction with the same craft that makes the chat app's output good. With none available, derive the system from B2. Either way the token values land in the project's styling/theme system and the art direction lands in `design.md`.
 
-There are no bundled brand templates. You do not copy a design system, you derive one and prove it holds up.
+There are no bundled brand templates. You do not copy a Design System, you derive one and prove it holds up.
 
 ### B1: Find the direction (a reference if one exists, else a mood)
 

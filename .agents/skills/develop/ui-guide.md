@@ -7,7 +7,7 @@ UI build track for `/develop`, read after the spec gate (`SKILL.md` Step 0) clas
 You are a senior product designer shipping a real product, not a developer wiring a form. Every UI page must leave as a complete, professional product surface, the quality you would expect from a top product or from Claude's own chat app, never a bare minimum stub. This is not optional styling advice. It is the definition of done for a UI build.
 
 **Design first, then integrate.** Build in two passes, so the codebase's constraints (tokens, libraries, accessibility) don't crush the design before it exists:
-1. **Design the surface** (bold, complete, opinionated), as if you were shipping it standalone, to the agreed design system. Compose the whole page (`ui/implementation.md` Phase 0).
+1. **Design the surface** (bold, complete, opinionated), as if you were shipping it standalone, to the agreed Design System. Compose the whole page (`ui/implementation.md` Phase 0).
 2. **Integrate it** into the codebase: installed styling library, real tokens, semantic HTML, accessibility, responsive (Phases 1 to 5).
 
 **Disqualifiers, any one means NOT done, fix before you report:**
@@ -24,8 +24,8 @@ You are a senior product designer shipping a real product, not a developer wirin
 
 1. **Figma connected (the spec says use it)** → pull the real design from Figma, build to the frames. Route: `ui/mcp.md`.
 2. **Image provided (pasted in chat, not a repo file)** → replicate it pixel perfect. The image is both the look and the composition, so match it faithfully and do NOT embellish beyond it. Tokenize what you see (values into CSS, character into `design.md`) and derive the responsive and accessible behavior a single screenshot cannot show. Route: `ui/image.md`.
-3. **A design system already exists** (`design.md` + tokens in CSS) → design the new page WITHIN that system, at the bar above: a full professional surface, consistent with what is already shipped. Route: `ui/existing.md`.
-4. **Nothing provided** → establish the design system first (the `frontend-design` skill when available, else derive it from the rules in `ui/generate.md` B2 and verify its contrast), record it in `design.md` (character + mandate + pointers) with the tokens written to CSS, then build to the bar above, maximalist and complete. Route: `ui/generate.md`.
+3. **A Design System already exists** (`design.md` + tokens in CSS) → design the new page WITHIN that system, at the bar above: a full professional surface, consistent with what is already shipped. Route: `ui/existing.md`.
+4. **Nothing provided** → establish the Design System first (the `frontend-design` skill when available, else derive it from the rules in `ui/generate.md` B2 and verify its contrast), record it in `design.md` (character + mandate + pointers) with the tokens written to CSS, then build to the bar above, maximalist and complete. Route: `ui/generate.md`.
 
 Cases 3 and 4 get the full chat app treatment (bold, complete, product level); case 2 gets faithful fidelity; case 1 gets Figma fidelity. Follow the source the spec recorded.
 
@@ -48,10 +48,10 @@ Check the governing spec first (`/develop` read it in Step 2). The design source
 Route on what the spec recorded, using the *Design source* table above:
 - Figma or another design MCP → `ui/mcp.md`.
 - A screenshot or a pasted image → `ui/image.md`.
-- An existing design system, or "extract from existing UI" → **Step 0.1**.
+- An existing Design System, or "extract from existing UI" → **Step 0.1**.
 - A described direction, a brand or site URL, or nothing at all → `ui/generate.md` (B1 finds the direction, B2 derives and verifies the tokens into CSS and the character into `design.md`), then implement.
 
-No spec governs this UI, or the spec is silent on the design system → fall through to the detection in Steps 0.1 to 0.3. If detection settles nothing, ask *"How should I get the design for this?"* with options **From Figma (its MCP)** · **From a screenshot / images** · **From the existing `design.md` / current UI** · **No design, suggest a direction** (the picker adds Other), then proceed by their pick.
+No spec governs this UI, or the spec is silent on the Design System → fall through to the detection in Steps 0.1 to 0.3. If detection settles nothing, ask *"How should I get the design for this?"* with options **From Figma (its MCP)** · **From a screenshot / images** · **From the existing `design.md` / current UI** · **No design, suggest a direction** (the picker adds Other), then proceed by their pick.
 
 ## Step 0.1: Check for existing design.md
 
@@ -64,13 +64,13 @@ Not found → **Step 0.2 (brownfield check)**.
 
 ## Step 0.2: Brownfield check (no design.md, but is there existing UI?)
 
-Before generating a fresh design system, check for an existing visual language to match; a new one over an existing app clashes with what's shipped. Search the project (ignoring dependency dirs) for:
+Before generating a fresh Design System, check for an existing visual language to match; a new one over an existing app clashes with what's shipped. Search the project (ignoring dependency dirs) for:
 - Styling, token, or theme files: wherever this platform keeps them (a CSS/token/theme file on web, the theme or style module on mobile or desktop).
 - Component directories: the existing component or screen tree.
 
 Found (brownfield): ask before proceeding, via your agent's interactive option picker (`AskUserQuestion` on Claude Code) or plain text options with the same choices:
-- **question**: "There's no `design.md`, but this project already has UI. How should I get the design system?"
-- **header**: "Design system"
+- **question**: "There's no `design.md`, but this project already has UI. How should I get the Design System?"
+- **header**: "Design System"
 - **options**:
   1. `Extract from existing code`: "Recommended, capture the design direction from the current tokens/components into `design.md`, pointing at the existing CSS tokens, so new UI matches what's shipped." → **Step 0.3**.
   2. `Use a reference`: "I'll give a screenshot, a `design.md` URL, or a site to work from." → **Step 1**.
@@ -135,6 +135,6 @@ After the selected source has resolved tokens, assets, and design direction, rea
 ## Reference files
 
 - Accessibility checklist: `checklist.md`
-- Project design system: `./design.md` (art direction and the build mandate; token values live in the platform styling/theme system)
+- Project Design System: `./design.md` (art direction and the build mandate; token values live in the platform styling/theme system)
 - UI source routes: `ui/mcp.md`, `ui/image.md`, `ui/existing.md`, `ui/generate.md`
 - UI implementation phases and report: `ui/implementation.md`

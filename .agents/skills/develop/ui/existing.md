@@ -1,8 +1,8 @@
 # UI Source: existing
 
-## Design.md path: existing design system
+## Design.md path: existing Design System
 
-Case 3: the project already has a design system. Two complementary sources: `design.md` holds the art direction (character, the build mandate, composition and component rules) and the project's styling/theme system holds the token VALUES (the single source of truth). Read both. Never invent a value; take colors, fonts, spacing, radius, shadows, and motion from those tokens, and any unspecified value from the nearest specified token.
+Case 3: the project already has a Design System. Two complementary sources: `design.md` holds the art direction (character, the build mandate, composition and component rules) and the project's styling/theme system holds the token VALUES (the single source of truth). Read both. Never invent a value; take colors, fonts, spacing, radius, shadows, and motion from those tokens, and any unspecified value from the nearest specified token.
 
 **Build the new page WITHIN the system, at the bar.** A new page in an existing system is still a full professional product surface (the guide's bar, and `ui/implementation.md` Phase 0), never a bare form: as complete and considered as the pages already shipped, and visually consistent with them. Design first (compose the whole surface in the system's language), then integrate.
 

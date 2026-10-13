@@ -61,14 +61,14 @@ export const getProjectVisualSvg = (projectId) => {
       return `
         <svg viewBox="0 0 400 200" class="w-full h-full object-cover rounded-t-lg select-none" aria-hidden="true" role="img">
           <rect width="400" height="200" fill="#131317" />
-          <!-- E-commerce layout mockup -->
+          <!-- E-Commerce layout mockup -->
           <rect x="30" y="20" width="160" height="150" rx="8" fill="#1e1e24" stroke="#7f7b82" stroke-opacity="0.2" stroke-width="1" />
           <rect x="45" y="35" width="130" height="70" rx="4" fill="#7f7b82" fill-opacity="0.15" />
           <circle cx="110" cy="70" r="20" fill="#e28413" fill-opacity="0.4" />
           <rect x="45" y="115" width="80" height="8" rx="4" fill="#fffaff" fill-opacity="0.9" />
           <rect x="45" y="130" width="40" height="14" rx="3" fill="#e28413" />
           <text x="52" y="141" fill="#fffaff" font-size="9" font-family="'Fira Code', monospace">$149</text>
-          
+
           <!-- Checkout Drawer Mockup -->
           <rect x="210" y="20" width="160" height="150" rx="8" fill="#1b1a21" stroke="#f45b69" stroke-opacity="0.4" stroke-width="1" />
           <rect x="225" y="32" width="90" height="8" rx="4" fill="#fffaff" />
@@ -123,7 +123,7 @@ export const getProjectVisualSvg = (projectId) => {
           <circle cx="182" cy="37" r="3.5" fill="#e28413" />
           <circle cx="194" cy="37" r="3.5" fill="#7f7b82" />
           <text x="215" y="41" fill="#7f7b82" font-size="8" font-family="'Fira Code', monospace">spec.md — 3ms AST Parse</text>
-          
+
           <text x="170" y="70" fill="#e28413" font-size="10" font-family="'Fira Code', monospace"># Architecture Spec</text>
           <text x="170" y="90" fill="#fffaff" font-size="9" font-family="'Fira Code', monospace">const parser = new Worker();</text>
           <text x="170" y="110" fill="#f45b69" font-size="9" font-family="'Fira Code', monospace">parser.postMessage({ crdt: true });</text>

@@ -60,12 +60,13 @@ Done when: visitors can switch between English and Portuguese, the selected lang
 
 * [x] Design it (spec): `/architect bilingual portfolio content` · [0001](../specs/0001-bilingual-portfolio-content.md)
 * [ ] Build it: `/develop bilingual portfolio content`
-  * [ ] Implement language resolution, base aware routing, persistence, browser detection, and English fallback, satisfies AC-2, AC-3, AC-7
+  * [x] Implement language resolution, base aware routing, persistence, browser detection, and English fallback, satisfies AC-2, AC-3, AC-7
   * [ ] Reshape shared and localized fixtures, merge stable records, translate content, and validate required keys, satisfies AC-4, AC-5, AC-8
   * [ ] Add language controls, full navigation, document language, and localized metadata, satisfies AC-1, AC-2, AC-6
   * [ ] Add the GitHub Pages fallback and repeatable desktop, mobile, accessibility, and production path checks, satisfies AC-7, AC-8, AC-9
+  * code in `src/i18n.js`, `src/services/dataService.js`, `src/components/`, `src/fixtures/`, `vite.config.js`, and `scripts/validate-translations.mjs`
 * [ ] Verify it: `/check verify bilingual portfolio content`
-* [ ] Test it: `/test bilingual portfolio content`
+* [x] Test it: `/test bilingual portfolio content`
 
 ### 8. Quality validation · needs a decision
 

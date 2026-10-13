@@ -9,7 +9,7 @@
  */
 export const createProjectSkeleton = () => {
   return `
-    <article class="bg-shadow-grey/80 border border-rosy-granite/20 rounded-xl overflow-hidden p-5 flex flex-col justify-between shadow-lg relative" role="status" aria-busy="true" aria-label="Loading project details...">
+    <article class="bg-shadow-grey/80 border border-rosy-granite/20 rounded-xl overflow-hidden p-5 flex flex-col justify-between shadow-lg relative" role="status" aria-busy="true" aria-label="${t('accessibility.loadingProject')}">
       <div>
         <!-- Visual Mockup Skeleton -->
         <div class="skeleton-box w-full h-48 mb-4 rounded-lg bg-rosy-granite/15 flex items-center justify-center">
@@ -72,3 +72,4 @@ export const renderProjectSkeletons = (container, count = 6) => {
   container.innerHTML = skeletonsHtml;
   container.setAttribute('aria-busy', 'true');
 };
+import { t } from '../i18n.js';

@@ -4,6 +4,7 @@
 
 import { getIcon } from '../utils/icons.js';
 import { trapFocus } from '../utils/a11y.js';
+import { getActiveLanguage, t } from '../i18n.js';
 
 export const createHeader = (profile) => {
   return `
@@ -19,37 +20,43 @@ export const createHeader = (profile) => {
               ${profile.name}
             </span>
             <span class="font-mono text-2xs text-rosy-granite tracking-wider uppercase">
-              Full Stack Developer
+              ${t('role')}
             </span>
           </div>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-6">
+        <nav aria-label="${t('navigation.primary')}" class="hidden md:flex items-center gap-6">
           <ul class="flex items-center gap-6 text-sm font-sans font-medium text-ghost-white/80">
             <li>
               <a href="#projects" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
-                Projects
+                ${t('navigation.projects')}
               </a>
             </li>
             <li>
               <a href="#skills" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
-                Architecture
+                ${t('navigation.skills')}
               </a>
             </li>
             <li>
               <a href="#about" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
-                About
+                ${t('navigation.about')}
               </a>
             </li>
             <li>
               <a href="#contact" class="nav-link hover:text-amber-earth transition-colors py-2 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none rounded">
-                Contact
+                ${t('navigation.contact')}
               </a>
             </li>
           </ul>
 
           <div class="h-5 w-px bg-rosy-granite/30" aria-hidden="true"></div>
+
+          <label class="sr-only" for="language-select">${t('language.label')}</label>
+          <select id="language-select" data-language-select class="bg-shadow-grey border border-rosy-granite/40 rounded-lg px-2.5 py-2 text-xs text-ghost-white focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none" aria-label="${t('language.label')}">
+            <option value="en" ${getActiveLanguage() === 'en' ? 'selected' : ''}>${t('language.english')}</option>
+            <option value="pt-br" ${getActiveLanguage() === 'pt-br' ? 'selected' : ''}>${t('language.portuguese')}</option>
+          </select>
 
           <!-- Availability & CTA -->
           <a
@@ -57,7 +64,7 @@ export const createHeader = (profile) => {
             class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-earth text-shadow-grey hover:bg-bubble-gum-pink hover:text-ghost-white transition-all text-xs font-mono font-bold tracking-wide shadow-md focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
-            <span>Available For Hire</span>
+            <span>${t('cta.hire')}</span>
           </a>
         </nav>
 
@@ -68,7 +75,7 @@ export const createHeader = (profile) => {
           class="md:hidden p-2.5 rounded-lg text-ghost-white border border-rosy-granite/30 hover:border-amber-earth hover:text-amber-earth transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
           aria-expanded="false"
           aria-controls="mobile-nav-drawer"
-          aria-label="Open navigation menu"
+          aria-label="${t('navigation.menuOpen')}"
         >
           ${getIcon('menu', 'w-6 h-6')}
         </button>
@@ -78,7 +85,7 @@ export const createHeader = (profile) => {
       <div
         id="mobile-nav-drawer"
         class="mobile-nav-drawer md:hidden fixed inset-0 z-50 h-screen bg-shadow-grey flex flex-col p-6 transition-transform duration-300 transform -translate-x-full border-r border-rosy-granite/20"
-        aria-label="Mobile Navigation Menu"
+        aria-label="${t('navigation.mobile')}"
         hidden
       >
         <div class="flex items-center justify-between pb-6 border-b border-rosy-granite/20">
@@ -95,7 +102,7 @@ export const createHeader = (profile) => {
             type="button"
             id="mobile-menu-close"
             class="p-2 rounded-lg text-rosy-granite hover:text-ghost-white border border-rosy-granite/30 focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
-            aria-label="Close navigation menu"
+            aria-label="${t('navigation.menuClose')}"
           >
             ${getIcon('close', 'w-6 h-6')}
           </button>
@@ -105,33 +112,38 @@ export const createHeader = (profile) => {
           <ul class="flex flex-col space-y-4 text-lg font-sans font-medium text-ghost-white">
             <li>
               <a href="#projects" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
-                Projects Showcase
+                ${t('navigation.projects')}
               </a>
             </li>
             <li>
               <a href="#skills" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
-                Architecture & Standards
+                ${t('navigation.skills')}
               </a>
             </li>
             <li>
               <a href="#about" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
-                Engineering Philosophy
+                ${t('navigation.about')}
               </a>
             </li>
             <li>
               <a href="#contact" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-rosy-granite/15 hover:text-amber-earth transition-colors">
-                Direct Contact
+                ${t('navigation.contact')}
               </a>
             </li>
           </ul>
         </nav>
 
         <div class="pt-6 border-t border-rosy-granite/20 flex flex-col gap-3">
+          <label class="text-xs font-mono uppercase tracking-wider text-rosy-granite" for="mobile-language-select">${t('language.label')}</label>
+          <select id="mobile-language-select" data-language-select class="bg-shadow-grey border border-rosy-granite/40 rounded-lg px-3 py-3 text-sm text-ghost-white focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none" aria-label="${t('language.label')}">
+            <option value="en" ${getActiveLanguage() === 'en' ? 'selected' : ''}>${t('language.english')}</option>
+            <option value="pt-br" ${getActiveLanguage() === 'pt-br' ? 'selected' : ''}>${t('language.portuguese')}</option>
+          </select>
           <a
             href="#contact"
             class="mobile-nav-link flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-earth text-shadow-grey font-bold font-sans text-base shadow-lg"
           >
-            <span>Discuss Contract / Project</span>
+            <span>${t('navigation.contact')}</span>
             ${getIcon('arrowRight', 'w-4 h-4')}
           </a>
         </div>

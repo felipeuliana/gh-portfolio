@@ -5,6 +5,7 @@
 
 import { getIcon } from '../utils/icons.js';
 import { getProjectVisualSvg } from '../utils/projectVisuals.js';
+import { t } from '../i18n.js';
 
 const projectImages = import.meta.glob('../images/*', {
   eager: true,
@@ -69,7 +70,7 @@ export const createProjectCard = (project) => {
             ${project.verified ? `
               <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-2xs font-mono font-semibold bg-shadow-grey/95 border border-bubble-gum-pink/50 text-bubble-gum-pink backdrop-blur-sm shadow" title="Verified by external client audit">
                 ${getIcon('checkCircle', 'w-3.5 h-3.5')}
-                Verified
+                ${t('projects.viewDetails')}
               </span>
             ` : ''}
           </div>
@@ -78,7 +79,7 @@ export const createProjectCard = (project) => {
         <div class="p-5">
           <!-- Client & Period -->
           <div class="flex items-center justify-between text-xs text-rosy-granite font-mono mb-2">
-            <span>Client: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
+            <span>${t('projects.showing')}: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
             <span>worked on ${project.year}</span>
           </div>
 
@@ -102,7 +103,7 @@ export const createProjectCard = (project) => {
           </div>
 
           <!-- Technologies -->
-          <div class="flex flex-wrap items-center gap-1.5 mb-2" aria-label="Technologies used">
+          <div class="flex flex-wrap items-center gap-1.5 mb-2" aria-label="${t('accessibility.technologies')}">
             ${techChipsHtml}
             ${remainingTechChip}
           </div>
@@ -115,7 +116,7 @@ export const createProjectCard = (project) => {
         <div class="flex items-center gap-2">
           ${project.liveUrl ? `
             <a
-              aria-label="Visit live deployment for ${project.title} (opens in new tab)"
+              aria-label="${t('projects.visit')} ${project.title} (${t('accessibility.external')})"
               class="p-2 rounded-lg border border-rosy-granite/30 text-ghost-white/80 hover:text-bubble-gum-pink hover:border-bubble-gum-pink/50 transition-colors focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
               href="${project.liveUrl}"
               rel="noopener noreferrer"
