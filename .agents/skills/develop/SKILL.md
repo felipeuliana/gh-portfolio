@@ -66,7 +66,7 @@ Is a decision owed and unrecorded? Do NOT judge this by introspection ("do I fee
 If any source is unnamed, stop and route to the gate (`/architect`, or record an `Assumed` spec; `/develop` implements decisions, it doesn't make them). A decision is also owed when you'd have to invent:
 
 - **A provider, library, integration, data model, or cross cutting pattern** (e.g. auth provider, DB/ORM, caching strategy).
-- **A whole UI page or screen**: its Design System (`design.md` there? if not, which direction?), sections/composition, component inventory, asset strategy (no screenshot, no repo images → e.g. an online source). Owed unless a `design.md` AND a page level spec pin these down.
+- **A whole UI page or screen**: its design system (`design.md` there? if not, which direction?), sections/composition, component inventory, asset strategy (no screenshot, no repo images → e.g. an online source). Owed unless a `design.md` AND a page level spec pin these down.
 - **A feature's behavior** (search, a wizard: "what exactly should it do?" is open; `/architect` asks those questions). Owed unless a spec defines it.
 
 **What "local implementation detail" actually means (the narrow exception):** ONLY a choice among options the spec's named sources already permit, a loop style, a variable name, which helper to call. The moment a choice **determines a value's source, or a behavior an acceptance criterion constrains**, it is load bearing by definition, however small it looks. Deriving "the user's today from the timezone on their last read row" is not a local detail: it picks the source of a value an AC constrains, so it is owed. NOT owed for genuine pure implementation: a small bug fix, a component matching an existing `design.md`, wiring pieces whose sources the spec already names, a copy tweak, anything an existing spec/`design.md`/`AGENTS.md` fully governs.
@@ -141,4 +141,4 @@ Once the gate clears (no decision owed, or the engineer chose `No, not needed` /
 - UI build track: `ui-guide.md`
 - Logical build track: `logical-guide.md`
 - Accessibility checklist (UI track, Phase 5): `checklist.md`
-- Project Design System (UI track): `./design.md`
+- Project design system (UI track): `./design.md`

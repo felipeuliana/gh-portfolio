@@ -27,7 +27,7 @@ _These are recommendations to keep your build orderly, not requirements. Skip an
 | 1 | Stack & architecture | Foundation | in-progress |
 | 2 | Coding standards & tooling | Foundation | planned |
 | 3 | Data model | Foundation | in-progress |
-| 4 | Design System & UI foundation | Foundation | planned |
+| 4 | Design system & UI foundation | Foundation | planned |
 | 5 | Core standup loop | Slice 1 | planned |
 | 6 | Daily reminders | Slice 2 | planned |
 | … | … | … | … |
@@ -64,10 +64,10 @@ Core entities every feature builds on: users, teams, memberships, standup entrie
 - [ ] Test it: `/test data model`
 Spec 0002 · code (filled by /develop)
 
-### 4. Design System & UI foundation · needs a decision
+### 4. Design system & UI foundation · needs a decision
 Visual language, layout primitives, and base components so the flows feel cohesive and accessible.
 **Done when:** `design.md` covers type/color/spacing/components, and base components handle focus and keyboard.
-- [ ] Design it (spec): `/architect Design System & UI foundation`
+- [ ] Design it (spec): `/architect design system & UI foundation`
 
 ## Slice 1: Core standup loop
 

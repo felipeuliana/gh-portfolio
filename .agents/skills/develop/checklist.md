@@ -60,7 +60,7 @@ Loaded by /develop (UI track) during Phase 5. Work through each section. Items m
 
 - [ ] No raw colour literals in new files
 - [ ] No raw size values for spacing, padding, margin, gap, font size, line height, radius, or shadow that duplicate a token (exception: a genuine one off constant)
-- [ ] All values reference the Design System's tokens
+- [ ] All values reference the design system's tokens
 - [ ] A missing token is documented as `// TODO: missing token: <what's needed>`, not invented inline
 
 ## Responsive (best effort verification)
