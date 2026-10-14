@@ -3,30 +3,31 @@
  * Loads isolated JSON fixtures with async handling and error fallbacks.
  */
 
-import profileData from '../fixtures/profile.json';
-import projectsData from '../fixtures/projects.json';
-import skillsData from '../fixtures/skills.json';
-import verificationData from '../fixtures/verification.json';
+import { getActiveContent, loadPortfolioContent } from '../i18n.js';
 
 /**
  * Simulates a realistic network latency for showcasing clean loading skeletons
- * @param {number} ms 
+ * @param {number} ms
  * @returns {Promise<void>}
  */
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const dataService = {
+  load(language) {
+    return loadPortfolioContent(language);
+  },
+
   /**
    * Retrieves profile information
    * @returns {Promise<object>}
    */
   async getProfile() {
-    return profileData;
+    return getActiveContent().profile;
   },
 
   /**
    * Retrieves projects list with simulated delay for loading skeleton demonstration
-   * @param {string} [category='all'] 
+   * @param {string} [category='all']
    * @param {number} [simulatedLatency=400]
    * @returns {Promise<Array<object>>}
    */
@@ -36,19 +37,29 @@ export const dataService = {
     }
 
     if (!category || category === 'all') {
-      return [...projectsData];
+      return [...getActiveContent().projects];
     }
 
-    return projectsData.filter((project) => project.category === category);
+    return getActiveContent().projects.filter((project) => project.category === category);
   },
 
   /**
    * Retrieves a single project by id
-   * @param {string} id 
+   * @param {string} id
+   * @returns {Promise<object|null>}
+   */
+  async getCTAs(id) {
+    const ctas = getActiveContent().ctas;
+    return ctas ? { ...ctas } : null;
+  },
+
+  /**
+   * Retrieves a single project by id
+   * @param {string} id
    * @returns {Promise<object|null>}
    */
   async getProjectById(id) {
-    const project = projectsData.find((p) => p.id === id);
+    const project = getActiveContent().projects.find((p) => p.id === id);
     return project ? { ...project } : null;
   },
 
@@ -57,7 +68,7 @@ export const dataService = {
    * @returns {Promise<Array<object>>}
    */
   async getSkills() {
-    return [...skillsData];
+    return [...getActiveContent().skills];
   },
 
   /**
@@ -65,6 +76,6 @@ export const dataService = {
    * @returns {Promise<object>}
    */
   async getVerificationData() {
-    return { ...verificationData };
+    return { ...getActiveContent().verification };
   }
 };

@@ -1,7 +1,7 @@
 # 0001. Bilingual portfolio content
 
 **Date**: 2026-09-17
-**Status**: Proposed
+**Status**: In Progress
 
 ## Summary
 

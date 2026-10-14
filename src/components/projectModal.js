@@ -6,6 +6,7 @@
 import { getIcon } from '../utils/icons.js';
 import { getProjectVisualSvg } from '../utils/projectVisuals.js';
 import { trapFocus } from '../utils/a11y.js';
+import { t } from '../i18n.js';
 
 let modalElement = null;
 let focusCleanup = null;
@@ -90,7 +91,7 @@ export const openProjectModal = (project, triggerElement) => {
           type="button"
           id="modal-close-btn"
           class="p-2 rounded-lg text-rosy-granite hover:text-ghost-white hover:bg-rosy-granite/20 transition-colors focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
-          aria-label="Close project modal"
+          aria-label="${t('accessibility.closeModal')}"
         >
           ${getIcon('close', 'w-5 h-5')}
         </button>

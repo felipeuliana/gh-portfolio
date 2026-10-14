@@ -4,12 +4,13 @@
  */
 
 import { announce } from '../utils/a11y.js';
+import { t } from '../i18n.js';
 
 const CATEGORIES = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'design-system', label: 'Design System' },
-  { id: 'web-apps', label: 'Web Applications' },
-  { id: 'ecommerce', label: 'E-Commerce & Scale' }
+  { id: 'all', key: 'all' },
+  { id: 'design-system', key: 'designSystem' },
+  { id: 'web-apps', key: 'webApps' },
+  { id: 'E-Commerce', key: 'E-Commerce' }
 ];
 
 export const createFilterTabs = (activeCategory = 'all', totalCount = 6) => {
@@ -30,7 +31,7 @@ export const createFilterTabs = (activeCategory = 'all', totalCount = 6) => {
             : 'bg-shadow-grey/70 text-ghost-white/80 border border-rosy-granite/30 hover:border-amber-earth/60 hover:text-amber-earth'
         }"
       >
-        ${cat.label}
+        ${t(`projects.${cat.key}`)}
       </button>
     `;
   }).join('');
@@ -39,7 +40,7 @@ export const createFilterTabs = (activeCategory = 'all', totalCount = 6) => {
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
       <div
         role="tablist"
-        aria-label="Filter projects by category"
+        aria-label="${t('projects.filterLabel')}"
         class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-none"
       >
         ${tabsHtml}
@@ -51,9 +52,9 @@ export const createFilterTabs = (activeCategory = 'all', totalCount = 6) => {
         class="text-xs font-mono text-rosy-granite flex items-center gap-1.5 self-end sm:self-auto shrink-0"
         aria-live="polite"
       >
-        <span>Showing</span>
+        <span>${t('projects.showing')}</span>
         <strong id="current-project-count" class="text-amber-earth font-bold">${totalCount}</strong>
-        <span>projects</span>
+        <span>${t('projects.items')}</span>
       </div>
     </div>
   `;

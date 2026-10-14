@@ -4,6 +4,7 @@
  */
 
 import { getIcon } from '../utils/icons.js';
+import { t } from '../i18n.js';
 
 export const createForm = () => {
   return `
@@ -17,7 +18,7 @@ export const createForm = () => {
       <!-- Name -->
       <div>
         <label for="contact-name" class="block text-xs font-mono uppercase tracking-wider text-ghost-white mb-2">
-          Name <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
+          ${t('contact.form.name')} <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
         </label>
         <input
           type="text"
@@ -28,13 +29,13 @@ export const createForm = () => {
           placeholder="Jane Doe"
           class="w-full px-4 py-3 rounded-lg bg-shadow-grey/90 border border-rosy-granite/40 text-ghost-white placeholder-rosy-granite text-sm font-sans focus:border-amber-earth focus:ring-1 focus:ring-amber-earth focus:outline-none transition-colors"
         />
-        <span id="name-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5 block" role="alert"></span>
+        <span id="name-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5" role="alert"></span>
       </div>
 
       <!-- Email -->
       <div>
         <label for="contact-email" class="block text-xs font-mono uppercase tracking-wider text-ghost-white mb-2">
-          Email Address <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
+          ${t('contact.formEmail')} <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
         </label>
         <input
           type="email"
@@ -45,7 +46,7 @@ export const createForm = () => {
           placeholder="jane@company.com"
           class="w-full px-4 py-3 rounded-lg bg-shadow-grey/90 border border-rosy-granite/40 text-ghost-white placeholder-rosy-granite text-sm font-sans focus:border-amber-earth focus:ring-1 focus:ring-amber-earth focus:outline-none transition-colors"
         />
-        <span id="email-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5 block" role="alert"></span>
+        <span id="email-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5" role="alert"></span>
       </div>
     </div>
 
@@ -69,7 +70,7 @@ export const createForm = () => {
     <!-- Message -->
     <div>
       <label for="contact-message" class="block text-xs font-mono uppercase tracking-wider text-ghost-white mb-2">
-        Project Details / Message <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
+        ${t('contact.formMessage')} <span class="text-bubble-gum-pink" aria-hidden="true">*</span>
       </label>
       <textarea
         id="contact-message"
@@ -79,7 +80,7 @@ export const createForm = () => {
         placeholder="Outline your timeline, requirements, or architecture targets..."
         class="w-full px-4 py-3 rounded-lg bg-shadow-grey/90 border border-rosy-granite/40 text-ghost-white placeholder-rosy-granite text-sm font-sans focus:border-amber-earth focus:ring-1 focus:ring-amber-earth focus:outline-none transition-colors resize-y"
       ></textarea>
-      <span id="message-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5 block" role="alert"></span>
+      <span id="message-error" class="hidden text-2xs font-mono text-bubble-gum-pink mt-1.5" role="alert"></span>
     </div>
 
     <!-- Form status feedback -->
@@ -91,7 +92,7 @@ export const createForm = () => {
       id="submit-btn"
       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-amber-earth text-shadow-grey font-bold font-sans text-sm hover:bg-bubble-gum-pink hover:text-ghost-white transition-all shadow-lg focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none cursor-pointer"
     >
-      <span>Transmit Inquiry</span>
+      <span>${t('contact.submit')}</span>
       ${getIcon('arrowRight', 'w-4 h-4')}
     </button>
   </form>

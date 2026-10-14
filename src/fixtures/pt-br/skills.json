@@ -1,0 +1,115 @@
+[
+  {
+    "category": "Arquitetura principal e padrões web",
+    "icon": "code",
+    "description": "Arquitetura de aplicações de página única resilientes e fáceis de manter, com separação clara de responsabilidades, marcação semântica e nenhum excesso de código em tempo de execução.",
+    "skills": [
+      {
+        "name": "Marcação HTML semântica",
+        "level": "Especialista",
+        "highlight": "Landmarks, Microdata, Living Standard"
+      },
+      {
+        "name": "CSS escalável",
+        "level": "Especialista",
+        "highlight": "Tokens de design, tipografia fluida, saída inferior a 10 kb"
+      },
+      {
+        "name": "JavaScript moderno",
+        "level": "Especialista",
+        "highlight": "Código limpo, padrões assíncronos, módulos ES"
+      },
+      {
+        "name": "Sistemas de componentes e estado",
+        "level": "Especialista",
+        "highlight": "Modelos reativos, eventos personalizados, stores imutáveis"
+      },
+      {
+        "name": "Protocolos REST e tempo real",
+        "level": "Avançado",
+        "highlight": "WebSockets, Server-Sent Events, Web Workers"
+      }
+    ]
+  },
+  {
+    "category": "Acessibilidade e UX inclusiva (WCAG/AA)",
+    "icon": "shield",
+    "description": "Construção de experiências web utilizáveis por todos. Aderência rigorosa às diretrizes WCAG 2.2 Nível AA, verificação com leitores de tela e navegação ergonômica por teclado.",
+    "skills": [
+      {
+        "name": "WCAG 2.2 Nível AA",
+        "level": "Avançado",
+        "highlight": "Contraste de cores, carga cognitiva, reorganização"
+      },
+      {
+        "name": "Práticas de autoria WAI-ARIA",
+        "level": "Avançado",
+        "highlight": "Comboboxes, modais, regiões dinâmicas, menus"
+      },
+      {
+        "name": "Navegação por teclado e foco",
+        "level": "Avançado",
+        "highlight": "Armadilhas de foco, restauração, sequências lógicas de tabulação"
+      },
+      {
+        "name": "Movimento reduzido e preferências",
+        "level": "Avançado",
+        "highlight": "prefers-reduced-motion, suporte a alto contraste"
+      }
+    ]
+  },
+  {
+    "category": "Performance e Core Web Vitals",
+    "icon": "zap",
+    "description": "Busca por pontuações entre 90 e 100 em todas as dimensões do Lighthouse. Eliminação de Cumulative Layout Shift, LCP instantâneo e latências de interação inferiores a 50 ms.",
+    "skills": [
+      {
+        "name": "Auditoria de pontuação",
+        "level": "Avançado",
+        "highlight": "Performance, acessibilidade, boas práticas, excelência em SEO"
+      },
+      {
+        "name": "Otimização de Core Web Vitals",
+        "level": "Avançado",
+        "highlight": "LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1"
+      },
+      {
+        "name": "Pipeline de recursos e assets",
+        "level": "Avançado",
+        "highlight": "Formatos modernos de imagem, subset de fontes, tree-shaking"
+      },
+      {
+        "name": "Virtualização do DOM e memória",
+        "level": "Avançado",
+        "highlight": "Grades de dados grandes, eliminação de vazamentos de memória"
+      }
+    ]
+  },
+  {
+    "category": "Rigor de engenharia e verificação",
+    "icon": "checkCircle",
+    "description": "Filosofia de código limpo aplicada a cada linha: caminhos previsíveis, verificação automatizada, implantação contínua e documentação completa.",
+    "skills": [
+      {
+        "name": "JavaScript com código limpo",
+        "level": "Especialista",
+        "highlight": "Responsabilidade única, imutabilidade, funções pequenas"
+      },
+      {
+        "name": "Ferramentas modernas de build",
+        "level": "Avançado",
+        "highlight": "Vite, Rollup, PostCSS, ESLint, hooks do Git"
+      },
+      {
+        "name": "Testes automatizados e CI/CD",
+        "level": "Avançado",
+        "highlight": "Playwright, Vitest, GitHub Actions, Pages"
+      },
+      {
+        "name": "Fixtures de conteúdo isoladas",
+        "level": "Especialista",
+        "highlight": "Camada de dados desacoplada, contratos simuláveis"
+      }
+    ]
+  }
+]

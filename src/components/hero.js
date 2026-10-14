@@ -4,6 +4,7 @@
  */
 
 import { getIcon } from '../utils/icons.js';
+import { t } from '../i18n.js';
 
 export const createHero = (profile) => {
   const statsHtml = profile.stats.map((stat) => `
@@ -13,6 +14,7 @@ export const createHero = (profile) => {
       <div class="text-2xs sm:text-xs font-mono text-rosy-granite">${stat.subtext}</div>
     </div>
   `).join('');
+  const [heroPrefix, heroEmphasis, heroSuffix] = profile.hero;
 
   return `
     <section id="hero" class="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28 border-b border-rosy-granite/20" aria-labelledby="hero-title">
@@ -28,12 +30,14 @@ export const createHero = (profile) => {
             <!-- Kicker Pill -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-amber-earth/10 border border-amber-earth/30 text-amber-earth shadow-sm">
               <span class="w-2 h-2 rounded-full bg-amber-earth animate-ping" aria-hidden="true"></span>
-              <span>${profile.title}</span>
+              <span>${t('role')}</span>
             </div>
 
             <!-- Massive Headline -->
             <h1 id="hero-title" class="text-4xl sm:text-5xl font-bold font-sans tracking-tight text-ghost-white leading-tight">
-              Engineering <span class="text-amber-earth underline decoration-bubble-gum-pink decoration-wavy decoration-2">resilient web experiences</span> with performance.
+              ${`${heroPrefix}
+              <span class="text-amber-earth underline decoration-bubble-gum-pink decoration-wavy decoration-2">${heroEmphasis}</span>
+              ${heroSuffix}`}
             </h1>
 
             <!-- Bio / Value Proposition -->
@@ -47,7 +51,7 @@ export const createHero = (profile) => {
                 href="#projects"
                 class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-earth text-shadow-grey hover:bg-bubble-gum-pink hover:text-ghost-white font-sans font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-amber-earth/20 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
               >
-                <span>Explore Selected Work</span>
+                <span>${t('cta.work')}</span>
                 ${getIcon('arrowRight', 'w-4 h-4')}
               </a>
 
@@ -55,7 +59,7 @@ export const createHero = (profile) => {
                 href="#contact"
                 class="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl text-rosy-granite hover:text-ghost-white font-mono text-xs sm:text-sm transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
               >
-                <span>Direct Contact</span>
+                <span>${t('cta.contact')}</span>
                 ${getIcon('arrowRight', 'w-3.5 h-3.5')}
               </a>
             </div>
@@ -70,39 +74,47 @@ export const createHero = (profile) => {
                   <span class="w-3 h-3 rounded-full bg-amber-earth/80 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-rosy-granite/80 inline-block"></span>
                 </div>
-                <span>audit_manifest.json</span>
+                <span>audit-manifest.json</span>
               </div>
 
               <div class="font-mono text-xs space-y-2.5 text-ghost-white/90">
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">ROLE:</span>
-                  <span class="text-amber-earth font-semibold">Full Stack Developer</span>
+                  <span class="text-emerald-400">ROLE:</span>
+                  <span class="text-ghost-white font-semibold">${t('role')}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">TECH_STACK:</span>
-                  <span class="text-ghost-white">HTML5 • ES2026 • Tailwind</span>
+                  <span class="text-emerald-400">TECH_STACK:</span>
+                  <span class="text-ghost-white font-semibold">HTML5, ES2026, Tailwind</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">A11Y_TARGET:</span>
-                  <span class="text-bubble-gum-pink font-semibold">WCAG 2.2 AA (Axe Certified)</span>
+                  <span class="text-emerald-400">CODE_STYLE:</span>
+                  <span class="text-ghost-white font-semibold">Clean Code, SOLID, DRY, KISS</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">CLS_BENCHMARK:</span>
-                  <span class="text-emerald-400 font-semibold">0.000 (Zero Shift)</span>
+                  <span class="text-emerald-400">A11Y_TARGET:</span>
+                  <span class="text-ghost-white font-semibold">WCAG 2.2 AA</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">LIGHTHOUSE:</span>
-                  <span class="text-amber-earth font-bold">90+</span>
+                  <span class="text-emerald-400">LIGHTHOUSE:</span>
+                  <span class="text-ghost-white font-bold">90+</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-rosy-granite">CODE_STYLE:</span>
-                  <span class="text-ghost-white">Clean Code</span>
+                  <span class="text-emerald-400">CLS:</span>
+                  <span class="text-ghost-white font-semibold">≤0.1</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-emerald-400">INP:</span>
+                  <span class="text-ghost-white font-semibold">≤200 ms</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-emerald-400">LCP:</span>
+                  <span class="text-ghost-white font-semibold">≤2.5 s</span>
                 </div>
               </div>
 
               <div class="mt-6 pt-4 border-t border-rosy-granite/20 flex items-center justify-between text-2xs font-mono text-rosy-granite">
-                <span>STATUS: VERIFIED READY</span>
-                <span class="text-amber-earth">● GITHUB PAGES</span>
+                <span class="text-emerald-400">HOST:</span>
+                <span class="text-ghost-white">GITHUB PAGES</span>
               </div>
             </div>
           </div>

@@ -1,0 +1,45 @@
+{
+  "accessibility": { "projectsList": "Projects list", "technologies": "Technologies used", "loadingProject": "Loading project details", "closeModal": "Close project modal", "copyEmail": "Copy email address", "external": "opens in a new tab", "scrollTop": "Scroll to top of page" },
+  "contact": { "email": "Contact email", "copy": "Copy", "copied": "Copied", "channels": "Verified channels", "form": { "name": "Name" }, "formEmail": "Email address", "formMessage": "Project details or message", "submit": "Transmit inquiry", "sending": "Transmitting", "success": "Thank you. Your message has been recorded.", "nameError": "Please enter your name.", "emailError": "Please enter a valid email address.", "messageError": "Please provide details for your inquiry." },
+  "cta": {
+    "contact": "Get in touch",
+    "hire": "Available for hire",
+    "work": "Explore the client portfolio"
+  },
+  "footer": { "hosted": "Hosted with GitHub Pages", "top": "Top" },
+  "language": { "label": "Language", "english": "English", "portuguese": "Portuguese" },
+  "metadata": {
+    "description": "Senior Software Engineer portfolio with accessible, performant and resilient digital products.",
+    "title": "Felipe Uliana | Software Engineer"
+  },
+  "navigation": { "primary": "Primary navigation", "mobile": "Mobile navigation", "projects": "Projects", "skills": "Architecture", "about": "About", "contact": "Contact", "hire": "Available for hire", "menuOpen": "Open navigation menu", "menuClose": "Close navigation menu" },
+  "projects": { "filterLabel": "Filter projects by category", "all": "All projects", "designSystem": "Design System", "webApps": "Web application", "E-Commerce": "E-Commerce", "showing": "Showing", "items": "projects", "viewDetails": "View details", "visit": "Visit live deployment", "noResults": "No projects found in this category.", "tryAnother": "Please select another category filter." },
+  "role": "Software Engineer",
+  "sections": {
+    "about": {
+      "description": "<p>Like the artisanal precision seen across dedicated craftspeople, web engineering requires an unwavering commitment to detail. For over 10 years, I have planned and executed web projects across tech enterprises, high-volume E-Commerces, and distributed cloud applications.</p><p>My philosophy is straightforward: prioritize <strong class=\"text-ghost-white font-semibold\">semantic HTML</strong> for unbreakable foundations, <strong class=\"text-ghost-white font-semibold\">WCAG 2.2 AA accessibility</strong> so software is inclusive by default, <strong class=\"text-ghost-white font-semibold\">precise CSS</strong> for a smooth user experience and <strong class=\"text-ghost-white font-semibold\">clean JavaScript</strong> without bloated abstraction layers.</p><p>Whether building a multi-tenant real-time data visualizer or designing a high-velocity component library, my goal is always the same: delivering verifiable, sustainable, performant web solutions for clients worldwide.</p>",
+      "kicker": "Engineering philosophy",
+      "title": "A decade of crafting web systems with passion, precision, and zero fluff."
+    },
+    "contact": {
+      "description": "Have an enterprise project, frontend architecture consultation, or high-impact contract in mind? Reach out directly.",
+      "kicker": "Initiate collaboration",
+      "title": "Let’s talk"
+    },
+    "footer": {
+      "description": "Developed with semantic HTML, clean JavaScript & Tailwind CSS.",
+      "kicker": null,
+      "title": null
+    },
+    "projects": {
+      "description": "Explore enterprise projects architected for performance, accessibility, semantics, modern styles and resilient behaviour.",
+      "kicker": "Client showcase",
+      "title": "Selected websites and applications"
+    },
+    "skills": {
+      "description": "Every application is architected around WCAG/AA accessibility, predictable modern JavaScript clean code, responsive layouts across all device viewports, and performance.",
+      "kicker": "Technical capability",
+      "title": "Architecture with intent"
+    }
+  }
+}

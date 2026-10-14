@@ -1,0 +1,160 @@
+[
+  {
+    "id": "sovos-compliance-cloud",
+    "accentColor": "#e28413",
+    "category": "web-apps",
+    "categoryLabel": "Aplicação web",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-sovos-compliance-cloud.jpg",
+    "liveUrl": "https://sovos.com/compliance-cloud/",
+    "metrics": {
+      "kpis": [
+        { "label": "Clientes", "value": "100.000+ no mundo" },
+        { "label": "Global", "value": "150+ países" },
+        { "label": "Entradas", "value": "70+ por ano" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Engenheiro de software",
+    "subtitle": "Aplicação web em Next.js para a empresa Sovos Compliance",
+    "summary": "A primeira e única solução que unifica software de conformidade tributária e relatórios regulatórios em uma plataforma.",
+    "technologies": [
+      "Next.js",
+      "Auth.js",
+      "i18n",
+      "Azure DevOps",
+      "a11y",
+      "CI/CD",
+      "NPM"
+    ],
+    "title": "Sovos Compliance Cloud",
+    "verified": true,
+    "year": "2025-2026"
+  },
+  {
+    "id": "mosaic-react",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Sistema de design",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-react.png",
+    "liveUrl": "https://mosaic-react.sovos.com/",
+    "metrics": {
+      "kpis": [
+        { "label": "Conformidade de a11y", "value": "WCAG AA" },
+        { "label": "Usuários ativos", "value": "3.200+" },
+        { "label": "Times que utilizam", "value": "20+ times" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Desenvolvedor frontend sênior",
+    "subtitle": "Biblioteca React para o sistema de design Mosaic da Sovos",
+    "summary": "Componentes prontos que seguem as diretrizes de marca da Sovos e garantem consistência visual em todas as aplicações.",
+    "technologies": [
+      "Material UI",
+      "React.js",
+      "Typescript",
+      "css-in-js",
+      "NPM"
+    ],
+    "title": "Mosaic React",
+    "verified": true,
+    "year": "2023-2026"
+  },
+  {
+    "id": "mosaic-css",
+    "accentColor": "#e28413",
+    "category": "design-system",
+    "categoryLabel": "Sistema de design",
+    "client": "Sovos Compliance",
+    "image": "/images/thumb-mosaic-css.png",
+    "liveUrl": "https://mosaic-css.sovos.com/",
+    "metrics": {
+      "kpis": [
+        { "label": "Times que utilizam", "value": "10+ times" },
+        { "label": "Usuários ativos", "value": "1.000+" },
+        { "label": "Conformidade de a11y", "value": "WCAG AA" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Desenvolvedor frontend sênior",
+    "subtitle": "Framework CSS para o sistema de design Mosaic da Sovos",
+    "summary": "O Mosaic UI é baseado no Mdbootstrap, um framework CSS e JS baseado no Material Design.",
+    "technologies": ["Material Design", "Mdbootstrap", "Sass", "Babel", "NPM"],
+    "title": "Mosaic CSS",
+    "verified": true,
+    "year": "2024"
+  },
+  {
+    "id": "cvc-flights",
+    "accentColor": "#e28413",
+    "category": "E-Commerce",
+    "categoryLabel": "E-Commerce",
+    "client": "CVC Corp",
+    "image": "/images/thumb-cvc-corp-flights.png",
+    "liveUrl": "https://www.cvc.com.br/passagens-aereas/",
+    "metrics": {
+      "kpis": [
+        { "label": "Pontuação de SEO", "value": "92" },
+        { "label": "Taxa de conversão", "value": "6-8%" },
+        { "label": "Pontuação de a11y", "value": "70+" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Desenvolvedor frontend sênior",
+    "subtitle": "Aplicação web em Next.js para venda de passagens aéreas",
+    "summary": "O E-Commerce B2C de Passagens Aéreas utiliza Material UI, styled-components e React Query para gerenciamento de estado do servidor.",
+    "technologies": ["React Query", "Typescript", "Next.js", "CI/CD", "NPM"],
+    "title": "Passagens Aéreas • B2C",
+    "verified": true,
+    "year": "2021-2023"
+  },
+  {
+    "id": "cvc-travel-insurance",
+    "accentColor": "#e28413",
+    "category": "E-Commerce",
+    "categoryLabel": "E-Commerce",
+    "client": "CVC Corp",
+    "image": "/images/thumb-cvc-corp-insurances.png",
+    "liveUrl": "https://www.cvc.com.br/seguro-viagem/",
+    "metrics": {
+      "kpis": [
+        { "label": "Taxa de conversão", "value": "15%" },
+        { "label": "Pontuação de SEO", "value": "92" },
+        { "label": "Pontuação de a11y", "value": "70+" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Desenvolvedor frontend sênior",
+    "subtitle": "Aplicação web em Next.js para venda de seguros de viagem",
+    "summary": "O E-Commerce B2C de Seguro Viagem utiliza Material UI, styled-components e MobX para gerenciamento de estado do cliente.",
+    "technologies": ["MobX", "Next.js", "Typescript", "MaterialUI", "NPM"],
+    "title": "Seguro Viagem • B2C",
+    "verified": true,
+    "year": "2021-2023"
+  },
+  {
+    "id": "cvc-car-rentals",
+    "accentColor": "#e28413",
+    "category": "E-Commerce",
+    "categoryLabel": "E-Commerce",
+    "client": "CVC Corp",
+    "image": "/images/thumb-cvc-corp-car-rentals.png",
+    "liveUrl": "https://www.cvc.com.br/aluguel-de-carros/",
+    "metrics": {
+      "kpis": [
+        { "label": "Pontuação de a11y", "value": "70+" },
+        { "label": "Pontuação de SEO", "value": "92" },
+        { "label": "Taxa de conversão", "value": "12%" }
+      ]
+    },
+    "repoUrl": null,
+    "role": "Desenvolvedor frontend sênior",
+    "subtitle": "Aplicação web em Next.js para venda de aluguel de carros",
+    "summary": "O E-Commerce B2C de Aluguel de Carros utiliza TypeScript, React Query e MobX para gerenciamento de estado.",
+    "technologies": ["Next.js", "Typescript", "MobX", "React Query", "NPM"],
+    "title": "Aluguel de Carros • B2C",
+    "verified": true,
+    "year": "2021-2023"
+  }
+]

@@ -3,10 +3,11 @@
  */
 
 import { getIcon } from '../utils/icons.js';
+import { t } from '../i18n.js';
 
 export const createSkillsSection = (skills) => {
   const categoriesHtml = skills.map((cat) => {
-    const skillsList = cat.skills.map((skill) => `
+    const skillsList = cat?.skills?.map((skill) => `
       <li class="flex items-center justify-between p-2.5 rounded-lg bg-shadow-grey/90 border border-rosy-granite/15 hover:border-amber-earth/40 transition-colors">
         <div class="flex flex-col">
           <span class="text-sm font-sans font-semibold text-ghost-white">${skill.name}</span>
@@ -49,13 +50,13 @@ export const createSkillsSection = (skills) => {
         <!-- Section Header -->
         <div class="max-w-3xl mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-bubble-gum-pink border border-bubble-gum-pink/30 mb-3">
-            <span>Engineering Discipline</span>
+            <span>${t('sections.skills.kicker')}</span>
           </div>
           <h2 id="skills-heading" class="text-3xl sm:text-4xl font-bold font-sans text-ghost-white mb-3">
-            Core Architecture & Web Standards
+            ${t('sections.skills.title')}
           </h2>
           <p class="text-base text-ghost-white/80 font-sans leading-relaxed">
-            Every application is architected around WCAG/AA accessibility, predictable modern JavaScript clean code, responsive layouts across all device viewports, and performance.
+            ${t('sections.skills.description')}
           </p>
         </div>
 

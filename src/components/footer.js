@@ -4,6 +4,7 @@
  */
 
 import { getIcon } from '../utils/icons.js';
+import { t } from '../i18n.js';
 
 export const createFooter = (profile) => {
   const currentYear = new Date().getFullYear();
@@ -17,17 +18,17 @@ export const createFooter = (profile) => {
           <div class="space-y-1 text-center md:text-left">
             <div class="flex items-center justify-center md:justify-start gap-2">
               <span class="font-sans font-bold text-ghost-white">${profile.name}</span>
-              <span class="text-xs text-rosy-granite font-mono">• Full Stack Developer</span>
+              <span class="text-xs text-rosy-granite font-mono">• ${t('role')}</span>
             </div>
             <p class="text-xs text-rosy-granite font-sans">
-              © 2014-${currentYear} ${profile.name}. Developed with semantic HTML, clean JavaScript & Tailwind CSS.
+              © 2014-${currentYear} ${profile.name}. ${t('sections.footer.description')}
             </p>
           </div>
 
           <!-- Standards & Badges -->
           <div class="flex flex-wrap items-center justify-center gap-3 text-2xs font-mono">
             <span class="px-2.5 py-1 rounded-full bg-shadow-grey border border-rosy-granite/30 text-ghost-white/80">
-              HOSTED WITH GITHUB PAGES
+              ${t('footer.hosted')}
             </span>
           </div>
 
@@ -37,9 +38,9 @@ export const createFooter = (profile) => {
               type="button"
               id="scroll-to-top-btn"
               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-shadow-grey border border-rosy-granite/40 hover:border-amber-earth text-ghost-white hover:text-amber-earth font-mono text-xs font-bold transition-all focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
-              aria-label="Scroll to top of page"
+              aria-label="${t('accessibility.scrollTop')}"
             >
-              <span>TOP</span>
+              <span>${t('footer.top')}</span>
               ${getIcon('arrowUp', 'w-4 h-4')}
             </button>
           </div>
