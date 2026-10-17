@@ -50,6 +50,10 @@ pnpm test:e2e
 - Commit messages follow Conventional Commits.
 - Deploy the static production build through GitHub Pages using `.github/workflows/deploy.yml`.
 
+## Agent skills
+
+- MCP servers: @playwright/mcp (recommended)
+
 ## Context files
 
 - [src/AGENTS.md](src/AGENTS.md): Application source structure, rendering conventions, fixture data, and accessibility gotchas.

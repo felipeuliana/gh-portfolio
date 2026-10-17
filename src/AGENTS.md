@@ -12,6 +12,7 @@ This area contains the single page portfolio application. The entry point mounts
 | `src/components/` | Semantic page sections, cards, forms, dialogs, navigation, feedback, and loading skeletons |
 | `src/services/dataService.js` | Access to the isolated JSON fixture data and simulated project loading latency |
 | `src/fixtures/` | Portfolio profile, project, skill, and verification content |
+| `src/i18n.js` | Language detection, persistent preferences, route resolution, and translation helpers |
 | `src/utils/a11y.js` | Live region announcements and focus trapping for interactive surfaces |
 | `src/utils/projectVisuals.js` | Inline SVG project illustrations without extra network requests |
 | `src/style.css` | Tailwind theme tokens, responsive design values, focus styles, motion preferences, and skeleton animation |
