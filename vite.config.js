@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { cpSync, copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -18,6 +18,13 @@ export default defineConfig({
         } catch (error) {
           if (error.code !== 'ENOENT') throw error;
         }
+      }
+      for (const language of ['en', 'pt-br']) {
+        cpSync(resolve('dist/assets'), resolve(`dist/${language}/assets`), { recursive: true });
+        cpSync(resolve('dist/fonts'), resolve(`dist/${language}/fonts`), { recursive: true });
+        cpSync(resolve('dist/images'), resolve(`dist/${language}/images`), { recursive: true });
+        cpSync(resolve('dist/site.webmanifest'), resolve(`dist/${language}/site.webmanifest`));
+        cpSync(resolve('dist/robots.txt'), resolve(`dist/${language}/robots.txt`));
       }
       copyFileSync(indexPath, resolve('dist/404.html'));
     }

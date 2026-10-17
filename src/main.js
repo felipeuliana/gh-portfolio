@@ -33,12 +33,33 @@ function initPortfolio() {
   const profile = content.profile;
   const skills = content.skills;
 
-  // Construct semantic document structure
-  appContainer.innerHTML = `
-    ${createHeader(profile)}
+  // Preserve the static hero from index.html so the browser can paint it before
+  // the full interactive sections are constructed.
+  const initialMain = document.getElementById('main-content');
+  if (!initialMain) return;
 
-    <main id="main-content" class="flex-1 focus:outline-none" tabindex="-1">
-      ${createHero(profile)}
+  initialMain.className = 'flex-1 focus:outline-none';
+  initialMain.setAttribute('tabindex', '-1');
+  const headerShell = document.getElementById('header-shell');
+  if (headerShell) {
+    headerShell.outerHTML = createHeader(profile);
+  } else {
+    initialMain.insertAdjacentHTML('beforebegin', createHeader(profile));
+  }
+  initialMain.insertAdjacentHTML('beforeend', '<div id="deferred-content"></div>');
+
+  const deferBelowFoldWork = window.requestIdleCallback
+    ? (callback) => window.requestIdleCallback(callback, { timeout: 1500 })
+    : (callback) => window.setTimeout(callback, 0);
+
+  deferBelowFoldWork(() => {
+    const deferredContent = document.getElementById('deferred-content');
+    if (!deferredContent) return;
+
+    const staticHero = document.querySelector('#main-content > section[aria-label="Portfolio introduction"]');
+    if (staticHero) staticHero.outerHTML = createHero(profile);
+
+    deferredContent.innerHTML = `
 
       <!-- Work / Projects Section -->
       <section id="projects" class="py-20 border-b border-rosy-granite/20" aria-labelledby="projects-heading">
@@ -75,46 +96,52 @@ function initPortfolio() {
         </div>
       </section>
 
-      ${createSkillsSection(skills)}
-      ${createAboutSection(profile)}
-      ${createContactSection(profile)}
-    </main>
+    `;
 
-    ${createFooter(profile)}
-  `;
+    deferBelowFoldWork(() => {
+      deferredContent.insertAdjacentHTML('beforeend', `
+        ${createSkillsSection(skills)}
+        ${createAboutSection(profile)}
+        ${createContactSection(profile)}
+        ${createFooter(profile)}
+      `);
 
-  // Initialize interactive component listeners
-  initHeaderListeners();
-  initProjectModal();
-  initContactListeners();
-  initFooterListeners();
+      // Initialize interactive component listeners after the deferred sections exist.
+      initHeaderListeners();
+      initProjectModal();
+      initContactListeners();
+      initFooterListeners();
 
-  // Setup Projects Grid with loading skeletons first
-  const projectsGrid = document.getElementById('projects-grid');
-  renderProjectSkeletons(projectsGrid, 6);
+      requestAnimationFrame(() => {
+        // Setup Projects Grid with loading skeletons first
+        const projectsGrid = document.getElementById('projects-grid');
+        renderProjectSkeletons(projectsGrid, 6);
 
-  // Load initial projects
-  loadAndRenderProjects(activeCategory);
+        // Load initial projects
+        loadAndRenderProjects(activeCategory);
 
-  // Initialize filter tab switching
-  initFilterTabs((newCategory) => {
-    activeCategory = newCategory;
-    loadAndRenderProjects(newCategory);
-  });
+        // Initialize filter tab switching
+        initFilterTabs((newCategory) => {
+          activeCategory = newCategory;
+          loadAndRenderProjects(newCategory);
+        });
 
-  // Setup event delegation for project card buttons
-  setupProjectCardInteractions();
+        // Setup event delegation for project card buttons
+        setupProjectCardInteractions();
 
-  // Setup intersection observer for active navigation links
-  setupScrollSpy();
+        // Setup intersection observer for active navigation links
+        setupScrollSpy();
+      });
 
-  document.querySelectorAll('[data-language-select]').forEach((select) => {
-    select.addEventListener('change', (event) => {
-      const selected = event.target.value;
-      persistLanguage(selected);
-      window.location.assign(buildLanguagePath(selected));
+      document.querySelectorAll('[data-language-select]').forEach((select) => {
+        select.addEventListener('change', (event) => {
+          const selected = event.target.value;
+          persistLanguage(selected);
+          window.location.assign(buildLanguagePath(selected));
+        });
+      });
     });
-  });
+    });
 }
 
 /**

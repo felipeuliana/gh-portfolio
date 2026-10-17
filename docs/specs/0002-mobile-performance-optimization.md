@@ -1,7 +1,7 @@
 # 0002. Mobile performance optimization
 
 **Date**: 2026-10-17
-**Status**: Proposed
+**Status**: Accepted
 
 ## Summary
 

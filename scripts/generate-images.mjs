@@ -5,7 +5,7 @@ import { promisify } from 'node:util';
 
 const run = promisify(execFile);
 const sourceDir = new URL('../src/images/', import.meta.url);
-const outputDir = new URL('../src/images/generated/', import.meta.url);
+const outputDir = new URL('../public/images/generated/', import.meta.url);
 await mkdir(outputDir, { recursive: true });
 
 for (const file of await readdir(sourceDir)) {

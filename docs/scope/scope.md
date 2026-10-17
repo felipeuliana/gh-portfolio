@@ -18,7 +18,7 @@ _These are recommendations to keep the build orderly, not requirements. You deci
 | 5 | Static deployment | Release 1 | existing |
 | 6 | Client verification proof | Release 1 | in-progress |
 | 7 | Bilingual portfolio content | Release 2 | in-progress |
-| 8 | Quality validation | Release 2 | in-progress |
+| 8 | Quality validation | Release 2 | done |
 
 ## Release 1
 
@@ -68,20 +68,20 @@ Done when: visitors can switch between English and Portuguese, the selected lang
 * [ ] Verify it: `/check verify bilingual portfolio content`
 * [x] Test it: `/test bilingual portfolio content`
 
-### 8. Quality validation · in-progress
+### 8. Quality validation · done
 
 Make the portfolio quality claims repeatable through automated or documented checks for accessibility, performance, Core Web Vitals, SEO, and production deployment.
 
 Done when: the project has a repeatable validation path, the public build passes the agreed thresholds, and failures are visible before deployment.
 
 * [x] Design it (spec): `/architect quality validation` · [0002](../specs/0002-mobile-performance-optimization.md)
-* [ ] Build it: `/develop quality validation`
-  * [ ] Eliminate boot delays, self host subset fonts with preloads, and tune secondary text sizes for contrast, satisfies AC-2, AC-4, AC-5, AC-8, AC-9
+* [x] Build it: `/develop quality validation`
+  * [x] Eliminate boot delays, self host subset fonts with preloads, and tune secondary text sizes for contrast, satisfies AC-2, AC-4, AC-5, AC-8, AC-9
   * [x] Generate responsive AVIF and WebP project images and inline the compiled production stylesheet, satisfies AC-3, AC-6, AC-7
   * [x] Add Vitest build contract tests and configure the Lighthouse CI GitHub Actions workflow, satisfies AC-1, AC-10
   * code in `src/main.js`, `src/services/dataService.js`, `src/style.css`, `index.html`, `scripts/generate-images.mjs`, `vite.config.js`, `tests/performance/budgets.test.js`, and `.github/workflows/lighthouse.yml`
-* [ ] Verify it: `/check verify quality validation`
-* [ ] Test it: `/test quality validation`
+* [x] Verify it: `/check verify quality validation`
+* [x] Test it: `/test quality validation`
 
 ## Deferred
 

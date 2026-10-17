@@ -7,11 +7,7 @@ import { getIcon } from '../utils/icons.js';
 import { getProjectVisualSvg } from '../utils/projectVisuals.js';
 import { t } from '../i18n.js';
 
-const projectImages = import.meta.glob('../images/*', {
-  eager: true,
-  import: 'default',
-  query: '?url'
-});
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
 /**
  * Creates an accessible project card element string
@@ -38,15 +34,9 @@ export const createProjectCard = (project) => {
       +${remainingTech}
     </span>
   ` : '';
-  const imageUrl = project.image
-    ? projectImages[`../${project.image.slice(1)}`]
-    : null;
-  const avifUrl = project.imageAvif
-    ? projectImages[`../${project.imageAvif.slice(1)}`]
-    : null;
-  const webpUrl = project.imageWebp
-    ? projectImages[`../${project.imageWebp.slice(1)}`]
-    : null;
+  const imageUrl = project.image ? assetUrl(project.image) : null;
+  const avifUrl = project.imageAvif ? assetUrl(project.imageAvif) : null;
+  const webpUrl = project.imageWebp ? assetUrl(project.imageWebp) : null;
   const avifSmallUrl = avifUrl ? avifUrl.replace('-800.', '-400.') : null;
   const webpSmallUrl = webpUrl ? webpUrl.replace('-800.', '-400.') : null;
 

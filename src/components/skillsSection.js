@@ -49,7 +49,7 @@ export const createSkillsSection = (skills) => {
 
         <!-- Section Header -->
         <div class="max-w-3xl mb-12">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-bubble-gum-pink border border-bubble-gum-pink/30 mb-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-ghost-white border border-bubble-gum-pink/30 mb-3">
             <span>${t('sections.skills.kicker')}</span>
           </div>
           <h2 id="skills-heading" class="text-3xl sm:text-4xl font-bold font-sans text-ghost-white mb-3">

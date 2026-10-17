@@ -47,7 +47,7 @@ export const createContactSection = (profile) => {
                 <button
                   type="button"
                   id="copy-email-btn"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-earth/20 hover:bg-amber-earth text-amber-earth hover:text-shadow-grey font-mono text-xs font-bold transition-all border border-amber-earth/40 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none shrink-0"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-earth/20 hover:bg-amber-earth text-ghost-white hover:text-shadow-grey font-mono text-xs font-bold transition-all border border-amber-earth/40 focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none shrink-0"
                   aria-label="${t('accessibility.copyEmail')} ${email?.display}"
                 >
                   ${getIcon('copy', 'w-3.5 h-3.5')}
