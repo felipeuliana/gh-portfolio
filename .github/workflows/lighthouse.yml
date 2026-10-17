@@ -17,7 +17,8 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm approve-builds --all
+      - run: pnpm install
       - run: pnpm images:generate
       - run: pnpm build
       - run: pnpm dlx @lhci/cli autorun --config=.lighthouserc.json
