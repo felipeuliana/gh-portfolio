@@ -18,12 +18,7 @@ const BASE = import.meta.env.BASE_URL || './';
 const normalizeLanguage = (value) => String(value || '').trim().toLowerCase();
 
 export const getSiteBase = () => {
-  if (BASE === './' || BASE === '.' || BASE === '/') {
-    const pathname = window.location.pathname.replace(/\/+$/, '');
-    const languageRoute = pathname.match(/^(.*)\/(?:en|pt-br)$/i);
-    if (languageRoute) return languageRoute[1] || '';
-    return pathname === '/' ? '' : pathname;
-  }
+  if (BASE === './' || BASE === '.' || BASE === '/') return '';
   return BASE.endsWith('/') ? BASE.slice(0, -1) : BASE;
 };
 

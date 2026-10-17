@@ -1,7 +1,7 @@
 # 0001. Bilingual portfolio content
 
-**Date**: 2026-09-17
-**Status**: In Progress
+**Date**: 2026-10-17
+**Status**: Accepted
 
 ## Summary
 
@@ -11,7 +11,7 @@ This feature lets visitors read the portfolio in English or Brazilian Portuguese
 
 The portfolio is a public single page application built with JavaScript, Vite, Tailwind CSS, and static JSON fixtures. Its current content is English only, and the page has no language resolver, language control, locale aware metadata, or translated fixture loading.
 
-The portfolio is deployed under the GitHub Pages repository base path, so language routes must preserve that base path. The project has no backend, database, authentication, or external service for content delivery. Translation support must therefore remain a client side and build time concern.
+The portfolio is deployed as a GitHub Pages project site at the repository base path `/gh-portfolio/`, so language routes must preserve that base path. Local development should continue to use `/` for short feedback loops. The project has no backend, database, authentication, or external service for content delivery. Translation support must therefore remain a client side and build time concern.
 
 The feature is intentionally limited to English and Brazilian Portuguese. It must preserve the existing project proof, accessibility behavior, responsive layout, and static deployment model while making every visitor facing value translatable.
 
@@ -28,14 +28,14 @@ The feature is intentionally limited to English and Brazilian Portuguese. It mus
 
 **Acceptance criteria**:
 
-- **AC-1**: The header exposes a native accessible language select at the top right, with English and Português (Brasil) options, and the mobile drawer includes the same control.
-- **AC-2**: Selecting a language navigates to the corresponding path segment, `/en` or `/pt-br`, after preserving the configured Vite site base path, and performs a full page initialization in that language.
+- **AC-1**: The header exposes a native accessible language select at the top right, with English and Português (Brasil) options, an explicit accessible label, and the mobile drawer includes the same control.
+- **AC-2**: Selecting a language navigates to the corresponding path segment, `/en` or `/pt-br`, after preserving the configured Vite site base path, and performs a full page initialization in that language. Direct visits to the root base path redirect to the resolved language path.
 - **AC-3**: Language resolution uses this precedence: supported URL path, valid `localStorage` value under `gh-portfolio.language`, exact case insensitive browser locale `pt-BR`, then English. Unsupported values resolve to English.
-- **AC-4**: Profile, projects, skills, verification content, interface labels, accessibility labels, and metadata are translated for both supported languages. Missing individual translated fields fall back to English.
+- **AC-4**: Profile, projects, skills, verification content, interface labels, accessibility labels, and metadata are translated for both supported languages. Missing individual translated fields and empty strings fall back to English.
 - **AC-5**: Stable identifiers, project categories, technologies, images, URLs, metrics, dates, and relationships remain consistent across languages. Localized records merge with shared records by stable ID.
-- **AC-6**: The document `lang` attribute, title, description, Open Graph text, canonical URL, and `hreflang` links reflect the active language and its base path.
+- **AC-6**: The document `lang` attribute, title, description, Open Graph text, canonical URL, and `hreflang` links reflect the active language and its base path. Open Graph locale uses underscore notation, URLs include the absolute origin, and alternate links include `x-default`.
 - **AC-7**: A direct visit to a supported language path loads the application through the generated `404.html` fallback. Unsupported or malformed language paths redirect to the English base path.
-- **AC-8**: The production build fails when required translation keys are missing, while runtime field fallback remains available for unexpected fixture gaps.
+- **AC-8**: The production build fails when required translation keys are missing or contain empty strings, while runtime field fallback remains available for unexpected fixture gaps.
 - **AC-9**: Language selection, route resolution, persistence, fallback behavior, metadata updates, accessibility state, and both supported production paths have automated or repeatable verification.
 
 ## Options considered
@@ -85,9 +85,9 @@ The build would produce separate English and Portuguese HTML entry points.
 
 ## Decision
 
-**Chosen option**: Option 1: Client side language paths with a generated fallback
+**Chosen option**: Option 1: Client side language paths with a generated fallback, using an explicit deployment base
 
-Use a single Vite application with `/en` and `/pt-br` language segments after the configured site base path. Add a generated `404.html` copy of the application entry so GitHub Pages can load supported paths, redirect malformed paths to English, and load language specific fixture content through a deterministic resolver.
+Use a single Vite application with `/en` and `/pt-br` language segments after the configured site base path. Configure Vite with `/gh-portfolio/` in the GitHub Pages build and `/` for local development. Add a generated `404.html` copy of the application entry so GitHub Pages can load supported paths, redirect malformed paths to English, and load language specific fixture content through a deterministic resolver. Route resolution must use the explicit Vite base instead of inferring the base from the current malformed URL.
 
 **Implementation skills**: none
 
@@ -116,11 +116,11 @@ The URL is the public source of truth, while local storage provides a convenient
 
 The fixture representation uses JSON files. Shared records are stored once, and language directories contain localized records keyed by the same stable IDs. This avoids duplicating URLs, images, metrics, and relationships while preserving one reviewable fixture set per language.
 
-The canonical fixture layout is `src/fixtures/shared/` for stable records, `src/fixtures/en/` for English localized records, and `src/fixtures/pt-br/` for Brazilian Portuguese localized records. Each localized record uses the same stable `id` as its shared record. The loader first merges shared data, then overlays the selected language, then overlays English for any missing or null localized field. Nested objects follow the same recursive rule. Arrays of records merge by stable `id`; arrays without IDs are replaced by the selected language array and fall back to English when absent.
+The canonical fixture layout is `src/fixtures/shared/` for stable records, `src/fixtures/en/` for English localized records, and `src/fixtures/pt-br/` for Brazilian Portuguese localized records. Each localized record uses the same stable `id` as its shared record. The loader first merges shared data, then overlays the selected language, then overlays English for any missing or null localized field. Nested objects follow the same recursive rule. Arrays of records merge by stable `id`. Arrays of scalar strings or items without IDs are replaced as a whole unit by the selected language array when present, and fall back to English when absent or empty. Empty strings in localized fixtures are treated as missing values: they trigger English fallback at runtime and fail build validation.
 
 Shared fields are IDs, categories, technologies, image paths, URLs, metrics, dates, ordering, and relationship keys. Localized fields are titles, names, summaries, descriptions, roles, responsibilities, outcomes, testimonial text, interface labels, accessibility labels, validation messages, and metadata text.
 
-The required translation key registry is `src/fixtures/translation-manifest.json`. It lists every required interface, accessibility, metadata, profile, project, skill, and verification key. The build validator compares both language fixture sets against this registry and reports the language, key path, and missing value before failing.
+The required translation key registry is `src/fixtures/translation-manifest.json` for interface and metadata keys. Dynamic collections (profile, projects, skills, and verification) are validated structurally against the English fixture schema at build time, ensuring all localized records have corresponding translated non empty values.
 
 **API surface**:
 
@@ -132,11 +132,11 @@ The required translation key registry is `src/fixtures/translation-manifest.json
 | `updateDocumentMetadata(language, content)` | function | language code, localized metadata | updated `lang`, title, description, Open Graph, canonical, and alternate links | public | missing metadata field falls back to English |
 | `validateTranslations()` | build function | English and Portuguese fixture sets | success or missing key report | build only | missing required key fails production build |
 
-Route normalization reads the Vite configured base path, strips it once, accepts only `/en` and `/pt-br` as supported language paths, normalizes language matching to lowercase, and uses one trailing slash policy. Duplicate separators, unsupported language segments, and malformed paths redirect to the English path. Query strings and hash fragments are preserved during language navigation and redirects.
+Route normalization reads the explicit Vite configured base path, strips it once, accepts only `/en` and `/pt-br` as supported language paths, normalizes language matching to lowercase, and strips any trailing slash so paths remain `/en` and `/pt-br`. Duplicate separators, unsupported language segments, and malformed paths redirect to the English path. Query strings and hash fragments are preserved during language navigation and redirects. The production base is `/gh-portfolio/`; the local base is `/`. Direct visits to the root base path resolve the preferred language and immediately replace the location with the normalized language path.
 
 The generated `404.html` reads `window.location.pathname`, removes the configured site base, checks the remaining path against the supported language paths, and loads the application for a supported path. For an unsupported or malformed path it redirects to the base aware English path while preserving `window.location.search` and `window.location.hash`.
 
-The metadata contract includes `html.lang`, `title`, `meta[name="description"]`, `meta[property="og:title"]`, `meta[property="og:description"]`, `meta[property="og:url"]`, `meta[property="og:locale"]`, one canonical link, and alternate links for `en` and `pt-BR`. Metadata values come from the active language metadata fixture, then the matching English field, then the existing static document value. URL values are generated from the configured base path and normalized language route.
+The metadata contract includes `html.lang`, `title`, `meta[name="description"]`, `meta[property="og:title"]`, `meta[property="og:description"]`, `meta[property="og:url"]`, `meta[property="og:locale"]`, one canonical link, alternate links for `en` and `pt-BR`, and `x-default` pointing to the base URL. Metadata values come from the active language metadata fixture, then the matching English field, then the existing static document value. URL values are absolute, generated by combining the window origin (or production repository URL) with the configured base path and normalized language route. The `og:locale` value uses underscore notation (`en_US` and `pt_BR`).
 
 **Value sourcing**:
 
@@ -150,8 +150,9 @@ The metadata contract includes `html.lang`, `title`, `meta[name="description"]`,
 | Render verification | localized evidence and testimonial text | localized verification record merged with shared verification record by `id` |
 | Build navigation target | `/en` or `/pt-br` after site base | configured Vite `base` and selected language code |
 | Update document language | `html.lang` value | `en` or `pt-BR` mapping from the resolved language |
-| Update metadata | title, description, Open Graph text, canonical, alternate links | localized metadata fixture merged with English fallback and the active base aware path |
-| Validate release | complete required translation key set | English fixture key inventory compared with Portuguese fixture key inventory |
+| Update metadata | title, description, Open Graph text, canonical, alternate links | localized metadata fixture merged with English fallback, window origin or site base URL, and the active base aware path |
+| Map Open Graph locale | `og:locale` value | language mapping dictionary producing `en_US` or `pt_BR` |
+| Validate release | complete required translation key set | English fixture key inventory compared with Portuguese fixture key inventory, checking for missing keys or empty strings |
 
 **Key invariants**:
 
@@ -161,9 +162,12 @@ The metadata contract includes `html.lang`, `title`, `meta[name="description"]`,
 - Input language values are trimmed and normalized to lowercase before validation. Only `en` and `pt-br` are accepted.
 - Invalid or stale local storage values are cleared when read. Storage is written only after explicit selection of a supported language.
 - Browser detection accepts only `pt-BR` or its lowercase equivalent `pt-br`; language only `pt` and other Portuguese variants resolve to English.
+- Direct visits to the root base path resolve language and replace the URL with the normalized language path.
+- Route normalization strips trailing slashes so paths stay `/en` and `/pt-br`.
 - Shared IDs and relationships are identical in every language.
-- Missing or null localized fields resolve recursively to the matching English field. Identified arrays merge by stable ID.
-- Required translation keys must exist before a production build succeeds.
+- Missing or null localized fields and empty strings resolve recursively to the matching English field. Identified arrays merge by stable ID.
+- Arrays of scalar strings or items without IDs replace as a whole unit and fall back to English when absent or empty.
+- Required translation keys must exist and must not be empty before a production build succeeds.
 - Language changes use a full navigation and do not preserve section, filter, or dialog state.
 - Language selection changes the URL, performs a full document navigation, and initializes the application from the new URL before rendering content.
 - The language control remains keyboard accessible and has a visible selected value.
@@ -192,7 +196,7 @@ Verification must be repeatable with the repository package manager and must cov
 
 The project uses the Skateboard approach, so the first slice should be a smallest usable whole: resolve one language, render the existing portfolio through the localized data service, expose the control, and support the two routes. The next slices thicken the content, metadata, deployment fallback, and validation.
 
-1. Create the language model, base aware route resolver, normalization rules, storage precedence, exact browser detection, query and hash preservation, and English fallback, satisfies **AC-2**, **AC-3**, and **AC-7**
+1. Create the language model, explicit environment aware route resolver, normalization rules, storage precedence, exact browser detection, query and hash preservation, and English fallback, satisfies **AC-2**, **AC-3**, and **AC-7**
 2. Reshape fixtures into shared and language specific sets, implement recursive stable ID merging, define the required key registry, translate all profile, project, skill, verification, interface, and metadata fields, and wire the localized data service, satisfies **AC-4**, **AC-5**, and **AC-8**
 3. Add the native header and mobile drawer language controls, full navigation behavior, document language updates, and localized metadata, satisfies **AC-1**, **AC-2**, and **AC-6**
 4. Add generated `404.html` fallback handling and malformed path redirection, then verify both base aware language paths in the production build, satisfies **AC-7**
@@ -212,6 +216,8 @@ The project uses the Skateboard approach, so the first slice should be a smalles
 
 - Every visitor facing string and metadata field needs translation maintenance.
 - Direct GitHub Pages paths depend on the generated fallback behavior.
+- Direct GitHub Pages visits through `404.html` issue an HTTP 404 status code, which means external social scrapers do not run client side JavaScript or read localized metadata on deep links.
+- The deployment base must stay aligned with the repository path, `/gh-portfolio/`, or published links and redirects will be wrong.
 - Client side metadata updates are less robust for crawlers than separate server rendered documents.
 - The shared and localized fixture model adds loader and validation complexity.
 

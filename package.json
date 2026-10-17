@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "node scripts/validate-translations.mjs && vite build",
-    "test": "vitest run",
+    "test": "vitest run tests",
+    "test:e2e": "playwright test",
     "preview": "vite preview",
     "images:generate": "node scripts/generate-images.mjs",
     "perf:budget": "pnpm build && vitest run tests/performance",
@@ -24,6 +25,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/vite": "^4.3.3",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.0",

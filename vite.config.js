@@ -29,7 +29,7 @@ export default defineConfig({
       copyFileSync(indexPath, resolve('dist/404.html'));
     }
   }],
-  base: './',
+  base: process.env.GITHUB_ACTIONS ? '/gh-portfolio/' : '/',
   build: {
     outDir: 'dist',
     sourcemap: true,

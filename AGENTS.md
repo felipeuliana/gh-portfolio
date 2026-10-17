@@ -33,6 +33,12 @@ pnpm build
 
 # Preview production build
 pnpm preview
+
+# Unit tests
+pnpm test
+
+# Browser tests
+pnpm test:e2e
 ```
 
 ## Code Style Rules

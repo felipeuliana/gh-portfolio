@@ -85,8 +85,8 @@ export const createProjectCard = (project) => {
         <div class="p-5">
           <!-- Client & Period -->
           <div class="flex items-center justify-between text-xs text-rosy-granite font-mono mb-2">
-            <span>${t('projects.showing')}: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
-            <span>worked on ${project.year}</span>
+            <span>${t('project.client')}: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
+            <span>${t('project.workedOn')} ${project.year}</span>
           </div>
 
           <!-- Title -->
@@ -139,7 +139,7 @@ export const createProjectCard = (project) => {
               target="_blank"
               rel="noopener noreferrer"
               class="p-2 rounded-lg border border-rosy-granite/30 text-ghost-white/80 hover:text-amber-earth hover:border-amber-earth/50 transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
-              aria-label="Inspect GitHub repository for ${project.title} (opens in new tab)"
+              aria-label="${t('accessibility.githubProfile')} ${project.title} (${t('accessibility.external')})"
             >
               ${getIcon('github', 'w-4 h-4')}
             </a>

@@ -28,7 +28,7 @@ This area contains the single page portfolio application. The entry point mounts
 
 ## Gotchas
 
-* Vite is configured with `base: './'` because the static site is deployed under a GitHub Pages repository path.
+* Vite is configured with environment specific bases because the static site is deployed under a GitHub Pages repository path.
 * Project data is bundled from JSON fixtures. The service latency is 0 so the loading state remains demonstrable.
 * The contact form currently validates and reports locally. Treat any change to submission behavior as a separate integration decision.
 

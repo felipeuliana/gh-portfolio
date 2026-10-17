@@ -1,5 +1,5 @@
 {
-  "accessibility": { "projectsList": "Projects list", "technologies": "Technologies used", "loadingProject": "Loading project details", "closeModal": "Close project modal", "copyEmail": "Copy email address", "external": "opens in a new tab", "scrollTop": "Scroll to top of page" },
+  "accessibility": { "projectsList": "Projects list", "technologies": "Technologies used", "loadingProject": "Loading project details", "closeModal": "Close project modal", "copyEmail": "Copy email address", "external": "opens in a new tab", "scrollTop": "Scroll to top of page", "githubProfile": "Inspect GitHub repository", "verifiedProject": "Verified by external client audit" },
   "contact": { "email": "Contact email", "copy": "Copy", "copied": "Copied", "channels": "Verified channels", "form": { "name": "Name" }, "formEmail": "Email address", "formMessage": "Project details or message", "submit": "Transmit inquiry", "sending": "Transmitting", "success": "Thank you. Your message has been recorded.", "nameError": "Please enter your name.", "emailError": "Please enter a valid email address.", "messageError": "Please provide details for your inquiry." },
   "cta": {
     "contact": "Get in touch",
@@ -7,6 +7,8 @@
     "work": "Explore the client portfolio"
   },
   "footer": { "hosted": "Hosted with GitHub Pages", "top": "Top" },
+  "project": { "client": "Client", "role": "Role", "year": "Year", "workedOn": "worked on", "verified": "Client verified", "audit": "Lighthouse audit benchmark", "scoreTarget": "100% score target", "performance": "Performance", "accessibility": "Accessibility", "bestPractices": "Best practices", "seo": "SEO", "achievements": "Key architectural achievements", "technologies": "Technologies and tools", "close": "Close", "source": "Source code", "live": "Live demonstration" },
+  "verification": { "kicker": "Verified delivery", "testimonials": "Direct client testimonials", "endorsements": "All endorsements verified for external review", "project": "Project" },
   "language": { "label": "Language", "english": "English", "portuguese": "Portuguese" },
   "metadata": {
     "description": "Senior Software Engineer portfolio with accessible, performant and resilient digital products.",
