@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.5] (2026-10-17)
+
 ### Added
 - Added responsive AVIF and WebP picture generation for project showcases.
 - Added self hosted subset Fira Code and Fira Sans fonts in WOFF2 format.
