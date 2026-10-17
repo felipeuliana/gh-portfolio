@@ -1,5 +1,49 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./fonts/FiraSans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./fonts/FiraSans-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./fonts/FiraSans-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-amber-earth: #e28413;
   --color-ghost-white: #fffaff;
@@ -36,9 +80,20 @@
   scroll-behavior: smooth;
 }
 
+/* Keep the rosy granite token for borders and decorative surfaces, while
+   making its text utility readable at normal text sizes. */
+.text-rosy-granite {
+  color: #b8b4bb;
+}
+
 .mobile-nav-drawer {
   background-color: #1e1e24;
   isolation: isolate;
+}
+
+#deferred-content {
+  content-visibility: auto;
+  contain-intrinsic-size: 2400px;
 }
 
 @media (prefers-reduced-motion: reduce) {

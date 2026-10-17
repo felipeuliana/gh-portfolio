@@ -12,6 +12,7 @@ This area contains the single page portfolio application. The entry point mounts
 | `src/components/` | Semantic page sections, cards, forms, dialogs, navigation, feedback, and loading skeletons |
 | `src/services/dataService.js` | Access to the isolated JSON fixture data and simulated project loading latency |
 | `src/fixtures/` | Portfolio profile, project, skill, and verification content |
+| `src/i18n.js` | Language detection, persistent preferences, route resolution, and translation helpers |
 | `src/utils/a11y.js` | Live region announcements and focus trapping for interactive surfaces |
 | `src/utils/projectVisuals.js` | Inline SVG project illustrations without extra network requests |
 | `src/style.css` | Tailwind theme tokens, responsive design values, focus styles, motion preferences, and skeleton animation |
@@ -28,8 +29,8 @@ This area contains the single page portfolio application. The entry point mounts
 
 ## Gotchas
 
-* Vite is configured with `base: './'` because the static site is deployed under a GitHub Pages repository path.
-* Project data is bundled from JSON fixtures. The service latency is intentional so the loading state remains demonstrable.
+* Vite is configured with environment specific bases because the static site is deployed under a GitHub Pages repository path.
+* Project data is bundled from JSON fixtures. The service latency is 0 so the loading state remains demonstrable.
 * The contact form currently validates and reports locally. Treat any change to submission behavior as a separate integration decision.
 
 _Drafted by /audit from the repo, worth a quick human pass. Edit freely: once a line stops matching this draft, later runs treat it as curated and will flag rather than overwrite._

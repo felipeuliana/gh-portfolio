@@ -1,0 +1,24 @@
+name: Lighthouse performance
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.3.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm approve-builds --all
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm images:generate
+      - run: pnpm build
+      - run: pnpm dlx @lhci/cli autorun --config=.lighthouserc.json

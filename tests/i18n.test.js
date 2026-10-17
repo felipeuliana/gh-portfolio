@@ -38,18 +38,18 @@ describe('language resolution and localized content', () => {
   });
 
   it('resolves supported URL language before storage and browser locale (AC-3)', () => {
-    expect(resolveLanguage('/portfolio/pt-br', 'en', 'en-US')).toBe('pt-br');
-    expect(resolveLanguage('/portfolio/en', 'pt-br', 'pt-BR')).toBe('en');
+    expect(resolveLanguage('/pt-br', 'en', 'en-US')).toBe('pt-br');
+    expect(resolveLanguage('/en', 'pt-br', 'pt-BR')).toBe('en');
   });
 
   it('uses valid storage and exact Brazilian Portuguese browser locale as fallbacks (AC-3)', () => {
-    expect(resolveLanguage('/portfolio/', 'pt-br', 'en-US')).toBe('pt-br');
-    expect(resolveLanguage('/portfolio/', 'invalid', 'pt-BR')).toBe('pt-br');
-    expect(resolveLanguage('/portfolio/', undefined, 'pt')).toBe('en');
+    expect(resolveLanguage('/', 'pt-br', 'en-US')).toBe('pt-br');
+    expect(resolveLanguage('/', 'invalid', 'pt-BR')).toBe('pt-br');
+    expect(resolveLanguage('/', undefined, 'pt')).toBe('en');
   });
 
   it('builds a base aware language path while preserving query and hash (AC-2)', () => {
-    expect(buildLanguagePath('pt-br')).toBe('/portfolio/pt-br?source=test#projects');
+    expect(buildLanguagePath('pt-br')).toBe('/pt-br?source=test#projects');
     expect(SUPPORTED_LANGUAGES).toEqual(['en', 'pt-br']);
   });
 
@@ -66,9 +66,44 @@ describe('language resolution and localized content', () => {
     expect(english.projects).toHaveLength(content.projects.length);
   });
 
+  it('provides translated project and verification labels for Portuguese content (AC-4)', () => {
+    const content = loadPortfolioContent('pt-br');
+
+    expect(content.ui.project.client).toBe('Cliente');
+    expect(content.ui.project.verified).toBe('Cliente verificado');
+    expect(content.ui.project.live).toBe('Demonstração publicada');
+    expect(content.ui.verification.testimonials).toBe('Depoimentos diretos de clientes');
+    expect(content.ui.accessibility.githubProfile).toBe('Inspecionar repositório no GitHub');
+  });
+
+  it('preserves shared project proof while translating visitor facing project fields (AC-5)', () => {
+    const content = loadPortfolioContent('pt-br');
+    const english = getActiveContent();
+    const portugueseProject = content.projects.find(({ id }) => id === 'cvc-flights');
+    const englishProject = english.projects.find(({ id }) => id === 'cvc-flights');
+
+    expect(portugueseProject).toMatchObject({
+      id: englishProject.id,
+      category: englishProject.category,
+      technologies: englishProject.technologies,
+      image: englishProject.image,
+      liveUrl: englishProject.liveUrl,
+      year: englishProject.year
+    });
+    expect(portugueseProject.title).toBe('Passagens Aéreas • B2C');
+    expect(portugueseProject.summary).toContain('E-Commerce B2C');
+  });
+
+  it('falls back to English for missing localized fields at runtime (AC-4)', () => {
+    const content = loadPortfolioContent('pt-br');
+
+    expect(content.profile.ctas).toEqual(['Explore Selected Work', 'Direct Contact']);
+    expect(content.projects[0].client).toBe('Sovos Compliance');
+  });
+
   it('clears an invalid stored language and falls back to English (AC-3)', () => {
     storage.set(STORAGE_KEY, 'fr');
-    expect(resolveLanguage('/portfolio/', 'fr', 'en-US')).toBe('en');
+    expect(resolveLanguage('/', 'fr', 'en-US')).toBe('en');
     expect(storage.has(STORAGE_KEY)).toBe(false);
   });
 });

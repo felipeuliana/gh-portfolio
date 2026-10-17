@@ -7,11 +7,7 @@ import { getIcon } from '../utils/icons.js';
 import { getProjectVisualSvg } from '../utils/projectVisuals.js';
 import { t } from '../i18n.js';
 
-const projectImages = import.meta.glob('../images/*', {
-  eager: true,
-  import: 'default',
-  query: '?url'
-});
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
 /**
  * Creates an accessible project card element string
@@ -38,9 +34,11 @@ export const createProjectCard = (project) => {
       +${remainingTech}
     </span>
   ` : '';
-  const imageUrl = project.image
-    ? projectImages[`../${project.image.slice(1)}`]
-    : null;
+  const imageUrl = project.image ? assetUrl(project.image) : null;
+  const avifUrl = project.imageAvif ? assetUrl(project.imageAvif) : null;
+  const webpUrl = project.imageWebp ? assetUrl(project.imageWebp) : null;
+  const avifSmallUrl = avifUrl ? avifUrl.replace('-800.', '-400.') : null;
+  const webpSmallUrl = webpUrl ? webpUrl.replace('-800.', '-400.') : null;
 
   return `
     <article
@@ -53,12 +51,20 @@ export const createProjectCard = (project) => {
         <!-- Preview Mockup Header -->
         <div class="relative overflow-hidden bg-shadow-grey border-b border-rosy-granite/20 h-48 w-full">
           ${imageUrl
-            ? `<img
+            ? `<picture>
+                ${avifUrl ? `<source type="image/avif" srcset="${avifSmallUrl} 400w, ${avifUrl} 800w" sizes="(max-width: 768px) 100vw, 33vw">` : ''}
+                ${webpUrl ? `<source type="image/webp" srcset="${webpSmallUrl} 400w, ${webpUrl} 800w" sizes="(max-width: 768px) 100vw, 33vw">` : ''}
+                <img
                 alt="${project.title}"
                 class="h-full w-full object-cover"
-                sizes="(max-width: 768px) 500px, (max-width: 1366px) 1000px, 1500px"
+                width="384"
+                height="192"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 src="${imageUrl}"
-              />`
+              />
+              </picture>`
             : getProjectVisualSvg(project.id)
           }
 
@@ -79,8 +85,8 @@ export const createProjectCard = (project) => {
         <div class="p-5">
           <!-- Client & Period -->
           <div class="flex items-center justify-between text-xs text-rosy-granite font-mono mb-2">
-            <span>${t('projects.showing')}: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
-            <span>worked on ${project.year}</span>
+            <span>${t('project.client')}: <strong class="text-ghost-white font-normal">${project.client}</strong></span>
+            <span>${t('project.workedOn')} ${project.year}</span>
           </div>
 
           <!-- Title -->
@@ -133,7 +139,7 @@ export const createProjectCard = (project) => {
               target="_blank"
               rel="noopener noreferrer"
               class="p-2 rounded-lg border border-rosy-granite/30 text-ghost-white/80 hover:text-amber-earth hover:border-amber-earth/50 transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
-              aria-label="Inspect GitHub repository for ${project.title} (opens in new tab)"
+              aria-label="${t('accessibility.githubProfile')} ${project.title} (${t('accessibility.external')})"
             >
               ${getIcon('github', 'w-4 h-4')}
             </a>

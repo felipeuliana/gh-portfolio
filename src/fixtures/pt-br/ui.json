@@ -6,7 +6,9 @@
     "closeModal": "Fechar modal do projeto",
     "copyEmail": "Copiar endereço de e-mail",
     "external": "abre em uma nova aba",
-    "scrollTop": "Voltar ao topo da página"
+    "scrollTop": "Voltar ao topo da página",
+    "githubProfile": "Inspecionar repositório no GitHub",
+    "verifiedProject": "Verificado por auditoria de cliente externo"
   },
   "contact": {
     "email": "E-mail de contato",
@@ -29,6 +31,8 @@
     "work": "Explore o portfólio de clientes"
   },
   "footer": { "hosted": "Hospedado com GitHub Pages", "top": "Topo" },
+  "project": { "client": "Cliente", "role": "Função", "year": "Ano", "workedOn": "trabalhado em", "verified": "Cliente verificado", "audit": "Referência de auditoria Lighthouse", "scoreTarget": "Meta de pontuação de 100%", "performance": "Desempenho", "accessibility": "Acessibilidade", "bestPractices": "Boas práticas", "seo": "SEO", "achievements": "Principais conquistas arquiteturais", "technologies": "Tecnologias e ferramentas", "close": "Fechar", "source": "Código-fonte", "live": "Demonstração publicada" },
+  "verification": { "kicker": "Entrega verificada", "testimonials": "Depoimentos diretos de clientes", "endorsements": "Todos os depoimentos foram verificados para avaliação externa", "project": "Projeto" },
   "language": {
     "label": "Idioma",
     "english": "Inglês",

@@ -17,8 +17,8 @@ _These are recommendations to keep the build orderly, not requirements. You deci
 | 4 | Contact path | Release 1 | existing |
 | 5 | Static deployment | Release 1 | existing |
 | 6 | Client verification proof | Release 1 | in-progress |
-| 7 | Bilingual portfolio content | Release 2 | in-progress |
-| 8 | Quality validation | Release 2 | planned |
+| 7 | Bilingual portfolio content | Release 2 | done |
+| 8 | Quality validation | Release 2 | done |
 
 ## Release 1
 
@@ -52,29 +52,36 @@ Done when: verification content is rendered in the page, connected to fixture da
 
 ## Release 2
 
-### 7. Bilingual portfolio content · in-progress
+### 7. Bilingual portfolio content · done
 
 Let visitors read the portfolio in English and Portuguese while preserving the same project proof, navigation, accessibility, and static deployment model.
 
 Done when: visitors can switch between English and Portuguese, the selected language is clear and preserved during navigation, and all public content and metadata have complete translations.
 
 * [x] Design it (spec): `/architect bilingual portfolio content` · [0001](../specs/0001-bilingual-portfolio-content.md)
-* [ ] Build it: `/develop bilingual portfolio content`
+* [x] Build it: `/develop bilingual portfolio content`
   * [x] Implement language resolution, base aware routing, persistence, browser detection, and English fallback, satisfies AC-2, AC-3, AC-7
-  * [ ] Reshape shared and localized fixtures, merge stable records, translate content, and validate required keys, satisfies AC-4, AC-5, AC-8
-  * [ ] Add language controls, full navigation, document language, and localized metadata, satisfies AC-1, AC-2, AC-6
-  * [ ] Add the GitHub Pages fallback and repeatable desktop, mobile, accessibility, and production path checks, satisfies AC-7, AC-8, AC-9
+  * [x] Reshape shared and localized fixtures, merge stable records, translate content, and validate required keys, satisfies AC-4, AC-5, AC-8
+  * [x] Add language controls, full navigation, document language, and localized metadata, satisfies AC-1, AC-2, AC-6
+  * [x] Add the GitHub Pages fallback and repeatable desktop, mobile, accessibility, and production path checks, satisfies AC-7, AC-8, AC-9
   * code in `src/i18n.js`, `src/services/dataService.js`, `src/components/`, `src/fixtures/`, `vite.config.js`, and `scripts/validate-translations.mjs`
-* [ ] Verify it: `/check verify bilingual portfolio content`
+* [x] Verify it: `/check verify bilingual portfolio content`
 * [x] Test it: `/test bilingual portfolio content`
 
-### 8. Quality validation · needs a decision
+### 8. Quality validation · done
 
 Make the portfolio quality claims repeatable through automated or documented checks for accessibility, performance, Core Web Vitals, SEO, and production deployment.
 
 Done when: the project has a repeatable validation path, the public build passes the agreed thresholds, and failures are visible before deployment.
 
-* [ ] Design it (spec): `/architect quality validation`
+* [x] Design it (spec): `/architect quality validation` · [0002](../specs/0002-mobile-performance-optimization.md)
+* [x] Build it: `/develop quality validation`
+  * [x] Eliminate boot delays, self host subset fonts with preloads, and tune secondary text sizes for contrast, satisfies AC-2, AC-4, AC-5, AC-8, AC-9
+  * [x] Generate responsive AVIF and WebP project images and inline the compiled production stylesheet, satisfies AC-3, AC-6, AC-7
+  * [x] Add Vitest build contract tests and configure the Lighthouse CI GitHub Actions workflow, satisfies AC-1, AC-10
+  * code in `src/main.js`, `src/services/dataService.js`, `src/style.css`, `index.html`, `scripts/generate-images.mjs`, `vite.config.js`, `tests/performance/budgets.test.js`, and `.github/workflows/lighthouse.yml`
+* [x] Verify it: `/check verify quality validation`
+* [x] Test it: `/test quality validation`
 
 ## Deferred
 

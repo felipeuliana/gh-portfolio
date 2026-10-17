@@ -82,7 +82,7 @@ export const openProjectModal = (project, triggerElement) => {
           ${project.verified ? `
             <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-bubble-gum-pink border border-bubble-gum-pink/40">
               ${getIcon('checkCircle', 'w-3.5 h-3.5')}
-              Client Verified
+              ${t('project.verified')}
             </span>
           ` : ''}
         </div>
@@ -107,9 +107,9 @@ export const openProjectModal = (project, triggerElement) => {
         <!-- Headings -->
         <div>
           <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-rosy-granite mb-1">
-            <span>Client: <strong class="text-ghost-white">${project.client}</strong></span>
-            <span>Role: <strong class="text-ghost-white">${project.role}</strong></span>
-            <span>Year: <strong class="text-ghost-white">${project.year}</strong></span>
+            <span>${t('project.client')}: <strong class="text-ghost-white">${project.client}</strong></span>
+            <span>${t('project.role')}: <strong class="text-ghost-white">${project.role}</strong></span>
+            <span>${t('project.year')}: <strong class="text-ghost-white">${project.year}</strong></span>
           </div>
           <h2 id="modal-project-title" class="text-2xl sm:text-3xl font-bold font-sans text-ghost-white mb-1">
             ${project.title}
@@ -121,31 +121,31 @@ export const openProjectModal = (project, triggerElement) => {
 
         <!-- Summary -->
         <p id="modal-project-summary" class="text-base text-ghost-white/90 leading-relaxed font-sans">
-          ${project.description}
+          ${project.description || project.summary}
         </p>
 
         <!-- Lighthouse Verified Audit Card -->
         <div class="p-4 rounded-xl bg-shadow-grey/90 border border-rosy-granite/30 space-y-3">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-mono uppercase tracking-wider text-rosy-granite">Lighthouse Audit Benchmark</span>
-            <span class="text-xs font-mono text-amber-earth font-semibold">100% Score Target</span>
+            <span class="text-xs font-mono uppercase tracking-wider text-rosy-granite">${t('project.audit')}</span>
+            <span class="text-xs font-mono text-amber-earth font-semibold">${t('project.scoreTarget')}</span>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             <div class="p-2.5 rounded-lg bg-shadow-grey border border-amber-earth/40">
               <span class="block text-2xl font-bold font-mono text-amber-earth">${scores.performance}</span>
-              <span class="text-2xs font-mono text-rosy-granite">Performance</span>
+              <span class="text-2xs font-mono text-rosy-granite">${t('project.performance')}</span>
             </div>
             <div class="p-2.5 rounded-lg bg-shadow-grey border border-bubble-gum-pink/40">
               <span class="block text-2xl font-bold font-mono text-bubble-gum-pink">${scores.accessibility}</span>
-              <span class="text-2xs font-mono text-rosy-granite">Accessibility</span>
+              <span class="text-2xs font-mono text-rosy-granite">${t('project.accessibility')}</span>
             </div>
             <div class="p-2.5 rounded-lg bg-shadow-grey border border-rosy-granite/40">
               <span class="block text-2xl font-bold font-mono text-ghost-white">${scores.bestPractices}</span>
-              <span class="text-2xs font-mono text-rosy-granite">Best Practices</span>
+              <span class="text-2xs font-mono text-rosy-granite">${t('project.bestPractices')}</span>
             </div>
             <div class="p-2.5 rounded-lg bg-shadow-grey border border-rosy-granite/40">
               <span class="block text-2xl font-bold font-mono text-ghost-white">${scores.seo}</span>
-              <span class="text-2xs font-mono text-rosy-granite">SEO</span>
+              <span class="text-2xs font-mono text-rosy-granite">${t('project.seo')}</span>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export const openProjectModal = (project, triggerElement) => {
         <!-- Key Highlights & Architectural Decisions -->
         <div class="space-y-3">
           <h3 class="text-sm font-mono uppercase tracking-wider text-amber-earth font-bold">
-            Key Architectural Achievements
+            ${t('project.achievements')}
           </h3>
           <ul class="space-y-2.5">
             ${highlightsList}
@@ -163,7 +163,7 @@ export const openProjectModal = (project, triggerElement) => {
         <!-- Tech Stack -->
         <div class="space-y-3">
           <h3 class="text-sm font-mono uppercase tracking-wider text-rosy-granite font-bold">
-            Technologies & Tools
+            ${t('project.technologies')}
           </h3>
           <div class="flex flex-wrap gap-2">
             ${techBadges}
@@ -178,7 +178,7 @@ export const openProjectModal = (project, triggerElement) => {
           id="modal-close-action"
           class="px-4 py-2 rounded-lg border border-rosy-granite/40 hover:bg-rosy-granite/20 text-ghost-white text-sm font-sans transition-colors focus-visible:ring-2 focus-visible:ring-rosy-granite focus-visible:outline-none"
         >
-          Close
+          ${t('project.close')}
         </button>
 
         <div class="flex items-center gap-3">
@@ -190,7 +190,7 @@ export const openProjectModal = (project, triggerElement) => {
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-rosy-granite/40 hover:border-amber-earth text-ghost-white hover:text-amber-earth text-sm font-sans transition-colors focus-visible:ring-2 focus-visible:ring-amber-earth focus-visible:outline-none"
             >
               ${getIcon('github', 'w-4 h-4')}
-              <span>Source Code</span>
+              <span>${t('project.source')}</span>
             </a>
           ` : ''}
 
@@ -201,7 +201,7 @@ export const openProjectModal = (project, triggerElement) => {
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-earth text-shadow-grey hover:bg-amber-earth/90 font-bold text-sm font-sans transition-all focus-visible:ring-2 focus-visible:ring-bubble-gum-pink focus-visible:outline-none"
             >
-              <span>Live Demonstration</span>
+              <span>${t('project.live')}</span>
               ${getIcon('external', 'w-4 h-4')}
             </a>
           ` : ''}

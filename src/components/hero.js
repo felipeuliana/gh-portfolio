@@ -28,7 +28,7 @@ export const createHero = (profile) => {
           <!-- Left Column: Typography & CTAs -->
           <div class="lg:col-span-8 space-y-6">
             <!-- Kicker Pill -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-amber-earth/10 border border-amber-earth/30 text-amber-earth shadow-sm">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-amber-earth/10 border border-amber-earth/30 text-ghost-white shadow-sm">
               <span class="w-2 h-2 rounded-full bg-amber-earth animate-ping" aria-hidden="true"></span>
               <span>${t('role')}</span>
             </div>

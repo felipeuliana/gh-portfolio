@@ -1,7 +1,7 @@
 {
   "tool": "vitest",
   "additionalTools": [],
-  "e2eTool": null,
+  "e2eTool": "playwright",
   "testDir": "tests",
   "filePattern": "**/*.test.js",
   "packageManager": "pnpm"

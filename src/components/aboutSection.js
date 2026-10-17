@@ -15,7 +15,7 @@ export const createAboutSection = (profile) => {
 
           <!-- Column 1: Narrative -->
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-bubble-gum-pink border border-bubble-gum-pink/30">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-bubble-gum-pink/15 text-ghost-white border border-bubble-gum-pink/30">
               <span>${t('sections.about.kicker')}</span>
             </div>
 

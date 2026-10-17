@@ -1,6 +1,6 @@
 /**
  * Data Service for Portfolio Content
- * Loads isolated JSON fixtures with async handling and error fallbacks.
+ * Loads isolated JSON fixtures with predictable local handling and error fallbacks.
  */
 
 import { getActiveContent, loadPortfolioContent } from '../i18n.js';
@@ -28,10 +28,10 @@ export const dataService = {
   /**
    * Retrieves projects list with simulated delay for loading skeleton demonstration
    * @param {string} [category='all']
-   * @param {number} [simulatedLatency=400]
+   * @param {number} [simulatedLatency=0]
    * @returns {Promise<Array<object>>}
    */
-  async getProjects(category = 'all', simulatedLatency = 350) {
+  async getProjects(category = 'all', simulatedLatency = 0) {
     if (simulatedLatency > 0) {
       await delay(simulatedLatency);
     }

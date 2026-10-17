@@ -33,6 +33,12 @@ pnpm build
 
 # Preview production build
 pnpm preview
+
+# Unit tests
+pnpm test
+
+# Browser tests
+pnpm test:e2e
 ```
 
 ## Code Style Rules
@@ -43,6 +49,10 @@ pnpm preview
 - Do not add placeholder content - implement clean loading skeletons instead;
 - Commit messages follow Conventional Commits.
 - Deploy the static production build through GitHub Pages using `.github/workflows/deploy.yml`.
+
+## Agent skills
+
+- MCP servers: @playwright/mcp (recommended)
 
 ## Context files
 

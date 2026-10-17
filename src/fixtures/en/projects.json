@@ -6,6 +6,8 @@
     "categoryLabel": "Web App",
     "client": "Sovos Compliance",
     "image": "/images/thumb-sovos-compliance-cloud.jpg",
+    "imageAvif": "/images/generated/thumb-sovos-compliance-cloud-800.avif",
+    "imageWebp": "/images/generated/thumb-sovos-compliance-cloud-800.webp",
     "liveUrl": "https://sovos.com/compliance-cloud/",
     "metrics": {
       "kpis": [
@@ -30,6 +32,8 @@
     "categoryLabel": "Design System",
     "client": "Sovos Compliance",
     "image": "/images/thumb-mosaic-react.png",
+    "imageAvif": "/images/generated/thumb-mosaic-react-800.avif",
+    "imageWebp": "/images/generated/thumb-mosaic-react-800.webp",
     "liveUrl": "https://mosaic-react.sovos.com/",
     "metrics": {
       "kpis": [
@@ -54,6 +58,8 @@
     "categoryLabel": "Design System",
     "client": "Sovos Compliance",
     "image": "/images/thumb-mosaic-css.png",
+    "imageAvif": "/images/generated/thumb-mosaic-css-800.avif",
+    "imageWebp": "/images/generated/thumb-mosaic-css-800.webp",
     "liveUrl": "https://mosaic-css.sovos.com/",
     "metrics": {
       "kpis": [
@@ -78,6 +84,8 @@
     "categoryLabel": "E-Commerce",
     "client": "CVC Corp",
     "image": "/images/thumb-cvc-corp-flights.png",
+    "imageAvif": "/images/generated/thumb-cvc-corp-flights-800.avif",
+    "imageWebp": "/images/generated/thumb-cvc-corp-flights-800.webp",
     "liveUrl": "https://www.cvc.com.br/passagens-aereas/",
     "metrics": {
       "kpis": [
@@ -102,6 +110,8 @@
     "categoryLabel": "E-Commerce",
     "client": "CVC Corp",
     "image": "/images/thumb-cvc-corp-insurances.png",
+    "imageAvif": "/images/generated/thumb-cvc-corp-insurances-800.avif",
+    "imageWebp": "/images/generated/thumb-cvc-corp-insurances-800.webp",
     "liveUrl": "https://www.cvc.com.br/seguro-viagem/",
     "metrics": {
       "kpis": [
@@ -126,6 +136,8 @@
     "categoryLabel": "E-Commerce",
     "client": "CVC Corp",
     "image": "/images/thumb-cvc-corp-car-rentals.png",
+    "imageAvif": "/images/generated/thumb-cvc-corp-car-rentals-800.avif",
+    "imageWebp": "/images/generated/thumb-cvc-corp-car-rentals-800.webp",
     "liveUrl": "https://www.cvc.com.br/aluguel-de-carros/",
     "metrics": {
       "kpis": [

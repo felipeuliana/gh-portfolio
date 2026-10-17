@@ -4,6 +4,7 @@
  */
 
 import { getIcon } from '../utils/icons.js';
+import { t } from '../i18n.js';
 
 export const createVerificationSection = (verificationData) => {
   const auditsHtml = verificationData.audits.map((audit) => `
@@ -37,7 +38,7 @@ export const createVerificationSection = (verificationData) => {
           <span class="text-xs font-mono text-rosy-granite block">${t.role}, ${t.company}</span>
         </div>
         <div class="text-right">
-          <span class="text-2xs font-mono text-bubble-gum-pink block">Project: ${t.project}</span>
+          <span class="text-2xs font-mono text-bubble-gum-pink block">${t('verification.project')}: ${t.project}</span>
           <span class="text-2xs font-mono text-rosy-granite block">${t.verifiedDate}</span>
         </div>
       </footer>
@@ -52,7 +53,7 @@ export const createVerificationSection = (verificationData) => {
         <div class="max-w-3xl mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-earth/15 text-amber-earth border border-amber-earth/30 mb-3">
             ${getIcon('shield', 'w-3.5 h-3.5')}
-            <span>Verified Delivery</span>
+            <span>${t('verification.kicker')}</span>
           </div>
           <h2 id="verification-heading" class="text-3xl sm:text-4xl font-bold font-sans text-ghost-white mb-3">
             ${verificationData.heading}
@@ -71,10 +72,10 @@ export const createVerificationSection = (verificationData) => {
         <div class="space-y-6">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-bold font-sans text-ghost-white">
-              Direct Client Testimonials
+              ${t('verification.testimonials')}
             </h3>
             <span class="text-xs font-mono text-rosy-granite">
-              All endorsements verified for external review
+              ${t('verification.endorsements')}
             </span>
           </div>
 
