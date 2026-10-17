@@ -22,7 +22,7 @@ let activeCategory = 'all';
 /**
  * Initializes and mounts the single page portfolio
  */
-async function initPortfolio() {
+function initPortfolio() {
   const appContainer = document.getElementById('app');
 
   if (!appContainer) return;
@@ -30,11 +30,8 @@ async function initPortfolio() {
   const language = initializeLanguage();
   dataService.load(language);
   const content = getActiveContent();
-  // Retrieve initial datasets
-  const [profile, skills] = await Promise.all([
-    dataService.getProfile(),
-    dataService.getSkills()
-  ]);
+  const profile = content.profile;
+  const skills = content.skills;
 
   // Construct semantic document structure
   appContainer.innerHTML = `
@@ -97,7 +94,7 @@ async function initPortfolio() {
   renderProjectSkeletons(projectsGrid, 6);
 
   // Load initial projects
-  await loadAndRenderProjects(activeCategory);
+  loadAndRenderProjects(activeCategory);
 
   // Initialize filter tab switching
   initFilterTabs((newCategory) => {
@@ -133,7 +130,7 @@ async function loadAndRenderProjects(category) {
   renderProjectSkeletons(projectsGrid, category === 'all' ? 6 : 3);
 
   try {
-    const projects = await dataService.getProjects(category, 300);
+    const projects = await dataService.getProjects(category, 0);
 
     if (projects.length === 0) {
       projectsGrid.innerHTML = `

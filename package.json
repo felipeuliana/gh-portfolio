@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "node scripts/validate-translations.mjs && vite build",
     "test": "vitest run",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images:generate": "node scripts/generate-images.mjs",
+    "perf:budget": "pnpm build && vitest run tests/performance",
+    "perf:lh": "pnpm dlx sirv-cli dist --port 4173 --gzip --brotli"
   },
   "keywords": [],
   "author": "",

@@ -41,6 +41,14 @@ export const createProjectCard = (project) => {
   const imageUrl = project.image
     ? projectImages[`../${project.image.slice(1)}`]
     : null;
+  const avifUrl = project.imageAvif
+    ? projectImages[`../${project.imageAvif.slice(1)}`]
+    : null;
+  const webpUrl = project.imageWebp
+    ? projectImages[`../${project.imageWebp.slice(1)}`]
+    : null;
+  const avifSmallUrl = avifUrl ? avifUrl.replace('-800.', '-400.') : null;
+  const webpSmallUrl = webpUrl ? webpUrl.replace('-800.', '-400.') : null;
 
   return `
     <article
@@ -53,12 +61,20 @@ export const createProjectCard = (project) => {
         <!-- Preview Mockup Header -->
         <div class="relative overflow-hidden bg-shadow-grey border-b border-rosy-granite/20 h-48 w-full">
           ${imageUrl
-            ? `<img
+            ? `<picture>
+                ${avifUrl ? `<source type="image/avif" srcset="${avifSmallUrl} 400w, ${avifUrl} 800w" sizes="(max-width: 768px) 100vw, 33vw">` : ''}
+                ${webpUrl ? `<source type="image/webp" srcset="${webpSmallUrl} 400w, ${webpUrl} 800w" sizes="(max-width: 768px) 100vw, 33vw">` : ''}
+                <img
                 alt="${project.title}"
                 class="h-full w-full object-cover"
-                sizes="(max-width: 768px) 500px, (max-width: 1366px) 1000px, 1500px"
+                width="384"
+                height="192"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 src="${imageUrl}"
-              />`
+              />
+              </picture>`
             : getProjectVisualSvg(project.id)
           }
 
