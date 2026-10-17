@@ -1,13 +1,17 @@
 {
   "name": "gh-portfolio",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "node scripts/validate-translations.mjs && vite build",
-    "test": "vitest run",
-    "preview": "vite preview"
+    "test": "vitest run tests",
+    "test:e2e": "playwright test",
+    "preview": "vite preview",
+    "images:generate": "node scripts/generate-images.mjs",
+    "perf:budget": "pnpm build && vitest run tests/performance",
+    "perf:lh": "pnpm dlx sirv-cli dist --port 4173 --gzip --brotli"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +25,9 @@
   },
   "type": "module",
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/vite": "^4.3.3",
+    "sharp": "^0.34.3",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.0",
     "vitest": "^5.0.4"
