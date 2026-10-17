@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added CI validation that generates project image assets and fails early when no generated files are produced.
+
 ## [1.0.0-beta.5] (2026-10-17)
 
 ### Added

@@ -38,6 +38,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate generated image assets
+        run: |
+          pnpm images:generate
+          test -n "$(find public/images/generated -type f | head -n 1)"
+
       - name: Build portfolio
         run: pnpm build
 
